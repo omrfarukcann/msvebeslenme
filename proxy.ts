@@ -26,12 +26,24 @@ export async function proxy(request: NextRequest) {
   const { data: { user } } = await supabase.auth.getUser()
   const path = request.nextUrl.pathname
 
-  // Giriş yapmamış kullanıcıyı /login sayfasına gönder
+  // 1. ZATEN GİRİŞ YAPMIŞSA: /login veya /register sayfalarına girmesin, paneline gitsin
+  if (user && (path === '/login' || path === '/register')) {
+    const { data: profile } = await supabase
+      .from('users')
+      .select('role')
+      .eq('id', user.id)
+      .single()
+
+    const targetUrl = profile?.role === 'admin' ? '/admin' : '/dashboard'
+    return NextResponse.redirect(new URL(targetUrl, request.url))
+  }
+
+  // 2. GİRİŞ YAPMAMIŞSA: /dashboard veya /admin'e girmesin, /login'e gitsin
   if (!user && (path.startsWith('/dashboard') || path.startsWith('/admin'))) {
     return NextResponse.redirect(new URL('/login', request.url))
   }
 
-  // Admin sayfasına girmeye çalışan kullanıcının rolünü kontrol et
+  // 3. ADMİN DEĞİLSE: /admin'e girmesin, /dashboard'a gitsin
   if (user && path.startsWith('/admin')) {
     const { data: profile } = await supabase
       .from('users')
@@ -48,5 +60,5 @@ export async function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/dashboard/:path*', '/admin/:path*'],
+  matcher: ['/dashboard/:path*', '/admin/:path*', '/login', '/register'],
 }

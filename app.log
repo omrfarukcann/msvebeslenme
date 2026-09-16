@@ -1,0 +1,3687 @@
+nohup: ignoring input
+
+> msvebeslenme@0.1.0 dev
+> next dev
+
+▲ Next.js 16.3.5 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.1.208.230:3000
+- Environments: .env.local
+✓ Ready in 347ms
+✓ Running next.config.ts took 35ms
+
+ GET /register 200 in 432ms (next.js: 173ms, application-code: 259ms)
+ GET /login 200 in 43ms (next.js: 16ms, application-code: 27ms)
+ GET /admin 200 in 2.6s (next.js: 15ms, proxy.ts: 2.5s, application-code: 86ms)
+ GET /?code=bd4c5379-1277-4c4b-85bb-7192f91e3750 200 in 378ms (next.js: 324ms, application-code: 54ms)
+ GET /?error=access_denied&error_code=otp_expired&error_description=Email+link+is+invalid+or+has+expired 200 in 32ms (next.js: 3ms, application-code: 29ms)
+ GET /api/auth/callback?code=b45779d7-c0d1-4d27-90c6-72615f47746c 307 in 1435ms (next.js: 438ms, application-code: 996ms)
+ GET /login?error=auth_code_error 200 in 97ms (next.js: 5ms, application-code: 93ms)
+ GET /dashboard 200 in 2.5s (next.js: 56ms, proxy.ts: 863ms, application-code: 1596ms)
+ GET /dashboard 200 in 2.3s (next.js: 5ms, proxy.ts: 942ms, application-code: 1331ms)
+ GET /dashboard 200 in 2.3s (next.js: 6ms, proxy.ts: 910ms, application-code: 1350ms)
+ GET /dashboard 200 in 2.5s (next.js: 4ms, proxy.ts: 1120ms, application-code: 1349ms)
+ GET /login 200 in 43ms (next.js: 4ms, application-code: 39ms)
+ GET /dashboard 200 in 1838ms (next.js: 4ms, proxy.ts: 394ms, application-code: 1439ms)
+ GET /dashboard 200 in 2.6s (next.js: 4ms, proxy.ts: 871ms, application-code: 1698ms)
+ GET /dashboard 200 in 2.9s (next.js: 4ms, proxy.ts: 1186ms, application-code: 1753ms)
+ GET /dashboard 200 in 2.9s (next.js: 4ms, proxy.ts: 1006ms, application-code: 1853ms)
+ GET /login 200 in 21ms (next.js: 4ms, application-code: 16ms)
+ GET /dashboard 200 in 2.3s (next.js: 3ms, proxy.ts: 500ms, application-code: 1846ms)
+ GET /dashboard 200 in 2.7s (next.js: 6ms, proxy.ts: 476ms, application-code: 2.2s)
+ GET /dashboard 200 in 2.3s (next.js: 4ms, proxy.ts: 524ms, application-code: 1752ms)
+ GET /admin 200 in 1316ms (next.js: 9ms, proxy.ts: 1267ms, application-code: 40ms)
+ GET /dashboard 200 in 2.6s (next.js: 3ms, proxy.ts: 861ms, application-code: 1783ms)
+ GET /dashboard 200 in 4.5s (next.js: 3ms, proxy.ts: 1505ms, application-code: 3.0s)
+ GET /admin 200 in 852ms (next.js: 4ms, proxy.ts: 810ms, application-code: 38ms)
+ GET /admin 200 in 1510ms (next.js: 4ms, proxy.ts: 1471ms, application-code: 36ms)
+ GET /dashboard 200 in 2.7s (next.js: 4ms, proxy.ts: 1013ms, application-code: 1637ms)
+ GET /dashboard 200 in 1782ms (next.js: 4ms, proxy.ts: 528ms, application-code: 1250ms)
+ GET /dashboard 200 in 2.4s (next.js: 4ms, proxy.ts: 876ms, application-code: 1553ms)
+ GET /basvuru 200 in 511ms (next.js: 448ms, application-code: 64ms)
+ GET /admin 200 in 993ms (next.js: 8ms, proxy.ts: 942ms, application-code: 42ms)
+✓ Compiled in 258ms
+ GET /basvuru 200 in 29ms (next.js: 4ms, application-code: 24ms)
+ GET /dashboard 200 in 1011ms (next.js: 37ms, proxy.ts: 903ms, application-code: 71ms)
+ GET /admin 200 in 1099ms (next.js: 4ms, proxy.ts: 1069ms, application-code: 25ms)
+ GET /admin 200 in 1263ms (next.js: 5ms, proxy.ts: 1238ms, application-code: 20ms)
+✓ Compiled in 90ms
+ GET /basvuru 200 in 40ms (next.js: 17ms, application-code: 23ms)
+ GET /dashboard 200 in 579ms (next.js: 4ms, proxy.ts: 532ms, application-code: 43ms)
+ GET /admin 200 in 1384ms (next.js: 4ms, proxy.ts: 1351ms, application-code: 28ms)
+ GET /admin 200 in 1354ms (next.js: 3ms, proxy.ts: 1331ms, application-code: 20ms)
+ GET /basvuru 200 in 32ms (next.js: 8ms, application-code: 24ms)
+✓ Compiled in 119ms
+ GET /dashboard 200 in 961ms (next.js: 4ms, proxy.ts: 922ms, application-code: 36ms)
+ GET /admin 200 in 1326ms (next.js: 7ms, proxy.ts: 1286ms, application-code: 32ms)
+ GET /admin 200 in 1119ms (next.js: 5ms, proxy.ts: 1097ms, application-code: 18ms)
+ GET /dashboard 200 in 2.2s (next.js: 9ms, proxy.ts: 902ms, application-code: 1274ms)
+ GET /dashboard 200 in 2.2s (next.js: 5ms, proxy.ts: 527ms, application-code: 1666ms)
+ GET /basvuru 200 in 68ms (next.js: 5ms, application-code: 62ms)
+ GET /admin 200 in 1531ms (next.js: 8ms, proxy.ts: 1432ms, application-code: 91ms)
+ GET /admin 200 in 1563ms (next.js: 4ms, proxy.ts: 1520ms, application-code: 40ms)
+✓ Compiled in 137ms
+✓ Compiled in 190ms
+ GET /basvuru 200 in 49ms (next.js: 19ms, application-code: 30ms)
+ GET /admin 200 in 1828ms (next.js: 13ms, proxy.ts: 1786ms, application-code: 30ms)
+ GET /admin 200 in 1320ms (next.js: 4ms, proxy.ts: 1297ms, application-code: 18ms)
+ GET /dashboard 200 in 3.2s (next.js: 4ms, proxy.ts: 963ms, application-code: 2.3s)
+✓ Compiled in 134ms
+ GET /basvuru 200 in 83ms (next.js: 20ms, application-code: 63ms)
+ GET /dashboard 200 in 563ms (next.js: 6ms, proxy.ts: 513ms, application-code: 44ms)
+ GET /admin 200 in 960ms (next.js: 8ms, proxy.ts: 917ms, application-code: 35ms)
+ GET /admin 200 in 814ms (next.js: 4ms, proxy.ts: 791ms, application-code: 20ms)
+ GET /basvuru 200 in 119ms (next.js: 3ms, application-code: 116ms)
+ GET /admin 200 in 1450ms (next.js: 4ms, proxy.ts: 1351ms, application-code: 96ms)
+ GET / 200 in 35ms (next.js: 3ms, application-code: 32ms)
+ GET /basvuru 200 in 71ms (next.js: 3ms, application-code: 68ms)
+ GET /admin 200 in 1885ms (next.js: 6ms, proxy.ts: 1843ms, application-code: 37ms)
+✓ Compiled in 39ms
+ GET /basvuru 200 in 27ms (next.js: 4ms, application-code: 23ms)
+ GET /admin 200 in 1998ms (next.js: 5ms, proxy.ts: 1962ms, application-code: 32ms)
+ GET /admin 200 in 1156ms (next.js: 4ms, proxy.ts: 1128ms, application-code: 24ms)
+ GET /dashboard 200 in 3.5s (next.js: 5ms, proxy.ts: 1261ms, application-code: 2.2s)
+ GET /basvuru 200 in 31ms (next.js: 7ms, application-code: 24ms)
+ GET /dashboard 200 in 1007ms (next.js: 4ms, proxy.ts: 951ms, application-code: 52ms)
+ GET /admin 200 in 1390ms (next.js: 3ms, proxy.ts: 1357ms, application-code: 30ms)
+ GET /admin 200 in 1947ms (next.js: 4ms, proxy.ts: 1920ms, application-code: 23ms)
+✓ Compiled in 145ms
+ GET /basvuru 200 in 59ms (next.js: 10ms, application-code: 49ms)
+ GET /admin 200 in 872ms (next.js: 55ms, proxy.ts: 779ms, application-code: 38ms)
+ GET /dashboard 200 in 865ms (next.js: 8ms, proxy.ts: 766ms, application-code: 91ms)
+ GET /admin 200 in 1470ms (next.js: 4ms, proxy.ts: 1444ms, application-code: 22ms)
+✓ Compiled in 83ms
+ GET /basvuru 200 in 24ms (next.js: 8ms, application-code: 16ms)
+ GET /dashboard 200 in 482ms (next.js: 31ms, proxy.ts: 403ms, application-code: 47ms)
+ GET /admin 200 in 935ms (next.js: 3ms, proxy.ts: 900ms, application-code: 32ms)
+ GET /admin 200 in 1226ms (next.js: 4ms, proxy.ts: 1204ms, application-code: 18ms)
+ GET /basvuru 200 in 29ms (next.js: 11ms, application-code: 19ms)
+✓ Compiled in 58ms
+ GET /dashboard 200 in 949ms (next.js: 7ms, proxy.ts: 898ms, application-code: 44ms)
+⨯ ReferenceError: Link is not defined
+    at Object.eval (app/(protected)/admin/page.tsx:7:6)
+    at module evaluation (.next/dev/server/chunks/ssr/[root-of-the-server]__0elg62r._.js:46:47)
+   5 |   </div>
+   6 |   <div className="flex items-center gap-3">
+>  7 |     <Link href="/">
+     |      ^
+   8 |       <Button variant="outline" size="sm" className="border-orange-200 text-orange-950 hover:bg-orange-50">
+   9 |         Ana Sayfaya Git
+  10 |       </Button>
+⨯ ReferenceError: Link is not defined
+    at Object.eval (app/(protected)/admin/page.tsx:7:6)
+    at module evaluation (.next/dev/server/chunks/ssr/[root-of-the-server]__0elg62r._.js:46:47)
+   5 |   </div>
+   6 |   <div className="flex items-center gap-3">
+>  7 |     <Link href="/">
+     |      ^
+   8 |       <Button variant="outline" size="sm" className="border-orange-200 text-orange-950 hover:bg-orange-50">
+   9 |         Ana Sayfaya Git
+  10 |       </Button> {
+  page: '/admin'
+}
+ GET /admin 500 in 3.4s (next.js: 1385ms, proxy.ts: 1930ms, application-code: 116ms)
+⨯ ReferenceError: Link is not defined
+    at Object.eval (app/(protected)/admin/page.tsx:7:6)
+    at module evaluation (.next/dev/server/chunks/ssr/[root-of-the-server]__0elg62r._.js:46:47)
+   5 |   </div>
+   6 |   <div className="flex items-center gap-3">
+>  7 |     <Link href="/">
+     |      ^
+   8 |       <Button variant="outline" size="sm" className="border-orange-200 text-orange-950 hover:bg-orange-50">
+   9 |         Ana Sayfaya Git
+  10 |       </Button> {
+  page: '/admin'
+}
+⨯ ReferenceError: Link is not defined
+    at Object.eval (app/(protected)/admin/page.tsx:7:6)
+    at module evaluation (.next/dev/server/chunks/ssr/[root-of-the-server]__0elg62r._.js:46:47)
+   5 |   </div>
+   6 |   <div className="flex items-center gap-3">
+>  7 |     <Link href="/">
+     |      ^
+   8 |       <Button variant="outline" size="sm" className="border-orange-200 text-orange-950 hover:bg-orange-50">
+   9 |         Ana Sayfaya Git
+  10 |       </Button> {
+  page: '/admin'
+}
+ GET /admin 500 in 873ms (next.js: 19ms, proxy.ts: 825ms, application-code: 29ms)
+[browser] Uncaught ReferenceError: Link is not defined
+    at Object.eval (app/(protected)/admin/page.tsx:7:6)
+    at module evaluation (.next/dev/server/chunks/ssr/[root-of-the-server]__0elg62r._.js:46:47)
+   5 |   </div>
+   6 |   <div className="flex items-center gap-3">
+>  7 |     <Link href="/">
+     |      ^
+   8 |       <Button variant="outline" size="sm" className="border-orange-200 text-orange-950 hover:bg-orange-50">
+   9 |         Ana Sayfaya Git
+  10 |       </Button>
+⨯ ReferenceError: Link is not defined
+    at Object.eval (app/(protected)/admin/page.tsx:7:6)
+    at module evaluation (.next/dev/server/chunks/ssr/[root-of-the-server]__0elg62r._.js:46:47)
+   5 |   </div>
+   6 |   <div className="flex items-center gap-3">
+>  7 |     <Link href="/">
+     |      ^
+   8 |       <Button variant="outline" size="sm" className="border-orange-200 text-orange-950 hover:bg-orange-50">
+   9 |         Ana Sayfaya Git
+  10 |       </Button> {
+  page: '/admin'
+}
+⨯ ReferenceError: Link is not defined
+    at Object.eval (app/(protected)/admin/page.tsx:7:6)
+    at module evaluation (.next/dev/server/chunks/ssr/[root-of-the-server]__0elg62r._.js:46:47)
+   5 |   </div>
+   6 |   <div className="flex items-center gap-3">
+>  7 |     <Link href="/">
+     |      ^
+   8 |       <Button variant="outline" size="sm" className="border-orange-200 text-orange-950 hover:bg-orange-50">
+   9 |         Ana Sayfaya Git
+  10 |       </Button> {
+  page: '/admin'
+}
+ GET /admin 500 in 1418ms (next.js: 34ms, proxy.ts: 1246ms, application-code: 138ms)
+⨯ ReferenceError: Link is not defined
+    at Object.eval (app/(protected)/admin/page.tsx:7:6)
+    at module evaluation (.next/dev/server/chunks/ssr/[root-of-the-server]__0elg62r._.js:46:47)
+   5 |   </div>
+   6 |   <div className="flex items-center gap-3">
+>  7 |     <Link href="/">
+     |      ^
+   8 |       <Button variant="outline" size="sm" className="border-orange-200 text-orange-950 hover:bg-orange-50">
+   9 |         Ana Sayfaya Git
+  10 |       </Button> {
+  page: '/admin'
+}
+⨯ ReferenceError: Link is not defined
+    at Object.eval (app/(protected)/admin/page.tsx:7:6)
+    at module evaluation (.next/dev/server/chunks/ssr/[root-of-the-server]__0elg62r._.js:46:47)
+   5 |   </div>
+   6 |   <div className="flex items-center gap-3">
+>  7 |     <Link href="/">
+     |      ^
+   8 |       <Button variant="outline" size="sm" className="border-orange-200 text-orange-950 hover:bg-orange-50">
+   9 |         Ana Sayfaya Git
+  10 |       </Button> {
+  page: '/admin'
+}
+ GET /admin 500 in 1322ms (next.js: 14ms, proxy.ts: 1298ms, application-code: 11ms)
+[browser] Uncaught ReferenceError: Link is not defined
+    at Object.eval (app/(protected)/admin/page.tsx:7:6)
+    at module evaluation (.next/dev/server/chunks/ssr/[root-of-the-server]__0elg62r._.js:46:47)
+   5 |   </div>
+   6 |   <div className="flex items-center gap-3">
+>  7 |     <Link href="/">
+     |      ^
+   8 |       <Button variant="outline" size="sm" className="border-orange-200 text-orange-950 hover:bg-orange-50">
+   9 |         Ana Sayfaya Git
+  10 |       </Button>
+ GET /dashboard 200 in 2.5s (next.js: 4ms, proxy.ts: 1157ms, application-code: 1316ms)
+⨯ ReferenceError: Link is not defined
+    at Object.eval (app/(protected)/admin/page.tsx:7:6)
+    at module evaluation (.next/dev/server/chunks/ssr/[root-of-the-server]__0elg62r._.js:46:47)
+   5 |   </div>
+   6 |   <div className="flex items-center gap-3">
+>  7 |     <Link href="/">
+     |      ^
+   8 |       <Button variant="outline" size="sm" className="border-orange-200 text-orange-950 hover:bg-orange-50">
+   9 |         Ana Sayfaya Git
+  10 |       </Button> {
+  page: '/admin'
+}
+⨯ ReferenceError: Link is not defined
+    at Object.eval (app/(protected)/admin/page.tsx:7:6)
+    at module evaluation (.next/dev/server/chunks/ssr/[root-of-the-server]__0elg62r._.js:46:47)
+   5 |   </div>
+   6 |   <div className="flex items-center gap-3">
+>  7 |     <Link href="/">
+     |      ^
+   8 |       <Button variant="outline" size="sm" className="border-orange-200 text-orange-950 hover:bg-orange-50">
+   9 |         Ana Sayfaya Git
+  10 |       </Button> {
+  page: '/admin'
+}
+ GET /admin 500 in 692ms (next.js: 40ms, proxy.ts: 635ms, application-code: 17ms)
+[browser] Uncaught ReferenceError: Link is not defined
+    at Object.eval (app/(protected)/admin/page.tsx:7:6)
+    at module evaluation (.next/dev/server/chunks/ssr/[root-of-the-server]__0elg62r._.js:46:47)
+   5 |   </div>
+   6 |   <div className="flex items-center gap-3">
+>  7 |     <Link href="/">
+     |      ^
+   8 |       <Button variant="outline" size="sm" className="border-orange-200 text-orange-950 hover:bg-orange-50">
+   9 |         Ana Sayfaya Git
+  10 |       </Button>
+ GET /basvuru 200 in 87ms (next.js: 5ms, application-code: 82ms)
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+✓ Compiled in 162ms
+⨯ ReferenceError: Link is not defined
+    at Object.eval (app/(protected)/admin/page.tsx:7:6)
+    at module evaluation (.next/dev/server/chunks/ssr/[root-of-the-server]__0elg62r._.js:46:47)
+   5 |   </div>
+   6 |   <div className="flex items-center gap-3">
+>  7 |     <Link href="/">
+     |      ^
+   8 |       <Button variant="outline" size="sm" className="border-orange-200 text-orange-950 hover:bg-orange-50">
+   9 |         Ana Sayfaya Git
+  10 |       </Button> {
+  page: '/admin'
+}
+⨯ ReferenceError: Link is not defined
+    at Object.eval (app/(protected)/admin/page.tsx:7:6)
+    at module evaluation (.next/dev/server/chunks/ssr/[root-of-the-server]__0elg62r._.js:46:47)
+   5 |   </div>
+   6 |   <div className="flex items-center gap-3">
+>  7 |     <Link href="/">
+     |      ^
+   8 |       <Button variant="outline" size="sm" className="border-orange-200 text-orange-950 hover:bg-orange-50">
+   9 |         Ana Sayfaya Git
+  10 |       </Button> {
+  page: '/admin'
+}
+ GET /admin 500 in 1776ms (next.js: 19ms, proxy.ts: 1741ms, application-code: 16ms)
+[browser] Uncaught ReferenceError: Link is not defined
+    at Object.eval (app/(protected)/admin/page.tsx:7:6)
+    at module evaluation (.next/dev/server/chunks/ssr/[root-of-the-server]__0elg62r._.js:46:47)
+   5 |   </div>
+   6 |   <div className="flex items-center gap-3">
+>  7 |     <Link href="/">
+     |      ^
+   8 |       <Button variant="outline" size="sm" className="border-orange-200 text-orange-950 hover:bg-orange-50">
+   9 |         Ana Sayfaya Git
+  10 |       </Button>
+⨯ ReferenceError: Link is not defined
+    at Object.eval (app/(protected)/admin/page.tsx:7:6)
+    at module evaluation (.next/dev/server/chunks/ssr/[root-of-the-server]__0elg62r._.js:46:47)
+   5 |   </div>
+   6 |   <div className="flex items-center gap-3">
+>  7 |     <Link href="/">
+     |      ^
+   8 |       <Button variant="outline" size="sm" className="border-orange-200 text-orange-950 hover:bg-orange-50">
+   9 |         Ana Sayfaya Git
+  10 |       </Button> {
+  page: '/admin'
+}
+⨯ ReferenceError: Link is not defined
+    at Object.eval (app/(protected)/admin/page.tsx:7:6)
+    at module evaluation (.next/dev/server/chunks/ssr/[root-of-the-server]__0elg62r._.js:46:47)
+   5 |   </div>
+   6 |   <div className="flex items-center gap-3">
+>  7 |     <Link href="/">
+     |      ^
+   8 |       <Button variant="outline" size="sm" className="border-orange-200 text-orange-950 hover:bg-orange-50">
+   9 |         Ana Sayfaya Git
+  10 |       </Button> {
+  page: '/admin'
+}
+ GET /admin 500 in 1224ms (next.js: 15ms, proxy.ts: 1188ms, application-code: 20ms)
+[browser] Uncaught ReferenceError: Link is not defined
+    at Object.eval (app/(protected)/admin/page.tsx:7:6)
+    at module evaluation (.next/dev/server/chunks/ssr/[root-of-the-server]__0elg62r._.js:46:47)
+   5 |   </div>
+   6 |   <div className="flex items-center gap-3">
+>  7 |     <Link href="/">
+     |      ^
+   8 |       <Button variant="outline" size="sm" className="border-orange-200 text-orange-950 hover:bg-orange-50">
+   9 |         Ana Sayfaya Git
+  10 |       </Button>
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+✓ Compiled in 301ms
+ GET /basvuru 200 in 25ms (next.js: 4ms, application-code: 21ms)
+ GET /dashboard 200 in 505ms (next.js: 14ms, proxy.ts: 416ms, application-code: 75ms)
+ GET /admin 200 in 1310ms (next.js: 5ms, proxy.ts: 1187ms, application-code: 118ms)
+ GET /admin 200 in 1465ms (next.js: 3ms, proxy.ts: 1432ms, application-code: 31ms)
+ GET / 200 in 41ms (next.js: 13ms, application-code: 28ms)
+ GET /dashboard 200 in 2.8s (next.js: 4ms, proxy.ts: 1093ms, application-code: 1676ms)
+ GET / 200 in 35ms (next.js: 3ms, application-code: 31ms)
+ GET /basvuru 200 in 69ms (next.js: 2ms, application-code: 67ms)
+ GET /login 200 in 24ms (next.js: 5ms, application-code: 19ms)
+ GET /admin 200 in 5.9s (next.js: 5ms, proxy.ts: 5.9s, application-code: 17ms)
+ GET /admin 200 in 1092ms (next.js: 6ms, proxy.ts: 1067ms, application-code: 20ms)
+ GET /login 200 in 25ms (next.js: 4ms, application-code: 21ms)
+ GET /dashboard 200 in 1749ms (next.js: 3ms, proxy.ts: 498ms, application-code: 1248ms)
+ GET /dashboard 200 in 1979ms (next.js: 4ms, proxy.ts: 384ms, application-code: 1591ms)
+ GET /dashboard 200 in 1728ms (next.js: 3ms, proxy.ts: 528ms, application-code: 1197ms)
+ GET / 200 in 29ms (next.js: 3ms, application-code: 25ms)
+ GET /basvuru 200 in 19ms (next.js: 3ms, application-code: 16ms)
+✓ Compiled in 120ms
+ GET /basvuru 200 in 52ms (next.js: 6ms, application-code: 46ms)
+ GET /basvuru 200 in 27ms (next.js: 4ms, application-code: 23ms)
+ GET /dashboard 307 in 918ms (proxy.ts: 913ms)
+ GET /dashboard 200 in 451ms (next.js: 4ms, proxy.ts: 401ms, application-code: 46ms)
+ GET /dashboard 307 in 365ms (proxy.ts: 362ms)
+ GET /dashboard 200 in 387ms (next.js: 4ms, proxy.ts: 344ms, application-code: 39ms)
+✓ Compiled in 113ms
+ GET /basvuru 200 in 59ms (next.js: 5ms, application-code: 54ms)
+ GET /basvuru 200 in 29ms (next.js: 6ms, application-code: 23ms)
+ GET /dashboard 200 in 535ms (next.js: 4ms, proxy.ts: 487ms, application-code: 44ms)
+ GET /dashboard 200 in 352ms (next.js: 4ms, proxy.ts: 312ms, application-code: 37ms)
+✓ Compiled in 146ms
+ GET /basvuru 200 in 48ms (next.js: 3ms, application-code: 44ms)
+ GET /basvuru 200 in 31ms (next.js: 4ms, application-code: 27ms)
+ GET /dashboard 200 in 938ms (next.js: 4ms, proxy.ts: 847ms, application-code: 88ms)
+ GET /dashboard 200 in 896ms (next.js: 4ms, proxy.ts: 854ms, application-code: 38ms)
+ GET /basvuru 200 in 86ms (next.js: 2ms, application-code: 84ms)
+ GET / 200 in 670ms (next.js: 39ms, application-code: 631ms)
+ GET / 200 in 527ms (next.js: 3ms, application-code: 525ms)
+ GET /dashboard 200 in 2.9s (next.js: 3ms, proxy.ts: 562ms, application-code: 2.4s)
+ GET /dashboard 200 in 2.1s (next.js: 4ms, proxy.ts: 811ms, application-code: 1264ms)
+ GET /dashboard 200 in 2.4s (next.js: 4ms, proxy.ts: 747ms, application-code: 1660ms)
+ GET /dashboard 200 in 2.4s (next.js: 3ms, proxy.ts: 1175ms, application-code: 1216ms)
+ GET /login 200 in 24ms (next.js: 5ms, application-code: 19ms)
+ GET /admin 200 in 1167ms (next.js: 8ms, proxy.ts: 1140ms, application-code: 18ms)
+ GET /admin 200 in 747ms (next.js: 4ms, proxy.ts: 726ms, application-code: 17ms)
+ GET / 200 in 623ms (next.js: 3ms, application-code: 620ms)
+ GET /login 200 in 60ms (next.js: 2ms, application-code: 58ms)
+ GET /dashboard 200 in 1618ms (next.js: 4ms, proxy.ts: 475ms, application-code: 1139ms)
+ GET /dashboard 200 in 2.7s (next.js: 4ms, proxy.ts: 497ms, application-code: 2.2s)
+ GET /login 200 in 24ms (next.js: 4ms, application-code: 20ms)
+ GET /register 200 in 28ms (next.js: 7ms, application-code: 21ms)
+ GET /dashboard 200 in 2.7s (next.js: 3ms, proxy.ts: 403ms, application-code: 2.3s)
+ GET / 200 in 549ms (next.js: 4ms, application-code: 545ms)
+ GET /login 200 in 24ms (next.js: 3ms, application-code: 21ms)
+ GET /admin 200 in 1237ms (next.js: 5ms, proxy.ts: 1213ms, application-code: 19ms)
+ GET /admin 200 in 714ms (next.js: 5ms, proxy.ts: 689ms, application-code: 19ms)
+ GET /admin 200 in 1055ms (next.js: 5ms, proxy.ts: 971ms, application-code: 79ms)
+✓ Compiled in 97ms
+ GET /register 200 in 38ms (next.js: 9ms, application-code: 29ms)
+ GET /admin 200 in 1209ms (next.js: 5ms, proxy.ts: 1183ms, application-code: 22ms)
+ GET /dashboard 200 in 2.3s (next.js: 6ms, proxy.ts: 808ms, application-code: 1472ms)
+✓ Compiled in 3.7s
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+✓ Compiled in 189ms
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+ GET /register 500 in 59ms (next.js: 30ms, application-code: 29ms)
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] Uncaught Error: ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./app/(protected)/admin/page.tsx:14:1)
+    at <unknown> (Error: (./app/(protected)/admin/page.tsx:14:1)
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+⨯ ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  [90m12 |[0m [36mimport[0m { [33mTextarea[0m } [36mfrom[0m [32m'@/components/ui/textarea'[0m
+  [90m13 |[0m [36mimport[0m { [33mBadge[0m } [36mfrom[0m [32m'@/components/ui/badge'[0m
+[31m[1m>[0m [90m14 |[0m [36mimport[0m { 
+  [90m   |[0m [31m[1m^^^^^^^^[0m
+[31m[1m>[0m [90m15 |[0m   [33mUsers[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^^[0m
+[31m[1m>[0m [90m16 |[0m   [33mFileText[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m17 |[0m   [33mVideo[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^^[0m
+[31m[1m>[0m [90m18 |[0m   [33mNewspaper[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m19 |[0m   [33mHome[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^[0m
+[31m[1m>[0m [90m20 |[0m   [33mLogOut[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^^^[0m
+[31m[1m>[0m [90m21 |[0m   [33mTrash2[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^^^[0m
+[31m[1m>[0m [90m22 |[0m   [33mEye[0m, 
+  [90m   |[0m [31m[1m^^^^^^^[0m
+[31m[1m>[0m [90m23 |[0m   [33mX[0m, 
+  [90m   |[0m [31m[1m^^^^^[0m
+[31m[1m>[0m [90m24 |[0m   [33mPlusCircle[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m25 |[0m   [33mExternalLink[0m,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m26 |[0m   [33mCalendarVideo[0m,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m27 |[0m   [33mSend[0m
+  [90m   |[0m [31m[1m^^^^^^[0m
+[31m[1m>[0m [90m28 |[0m } [36mfrom[0m [32m'lucide-react'[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m29 |[0m
+  [90m30 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mAdminDashboard[0m() {
+  [90m31 |[0m   [36mconst[0m router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+
+
+./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  [90m12 |[0m [36mimport[0m { [33mTextarea[0m } [36mfrom[0m [32m'@/components/ui/textarea'[0m
+  [90m13 |[0m [36mimport[0m { [33mBadge[0m } [36mfrom[0m [32m'@/components/ui/badge'[0m
+[31m[1m>[0m [90m14 |[0m [36mimport[0m { 
+  [90m   |[0m [31m[1m^^^^^^^^[0m
+[31m[1m>[0m [90m15 |[0m   [33mUsers[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^^[0m
+[31m[1m>[0m [90m16 |[0m   [33mFileText[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m17 |[0m   [33mVideo[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^^[0m
+[31m[1m>[0m [90m18 |[0m   [33mNewspaper[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m19 |[0m   [33mHome[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^[0m
+[31m[1m>[0m [90m20 |[0m   [33mLogOut[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^^^[0m
+[31m[1m>[0m [90m21 |[0m   [33mTrash2[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^^^[0m
+[31m[1m>[0m [90m22 |[0m   [33mEye[0m, 
+  [90m   |[0m [31m[1m^^^^^^^[0m
+[31m[1m>[0m [90m23 |[0m   [33mX[0m, 
+  [90m   |[0m [31m[1m^^^^^[0m
+[31m[1m>[0m [90m24 |[0m   [33mPlusCircle[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m25 |[0m   [33mExternalLink[0m,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m26 |[0m   [33mCalendarVideo[0m,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m27 |[0m   [33mSend[0m
+  [90m   |[0m [31m[1m^^^^^^[0m
+[31m[1m>[0m [90m28 |[0m } [36mfrom[0m [32m'lucide-react'[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m29 |[0m
+  [90m30 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mAdminDashboard[0m() {
+  [90m31 |[0m   [36mconst[0m router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+
+ GET /admin 500 in 1206ms (next.js: 16ms, proxy.ts: 1175ms, application-code: 14ms)
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] Uncaught Error: ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./app/(protected)/admin/page.tsx:14:1)
+    at <unknown> (Error: (./app/(protected)/admin/page.tsx:14:1)
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+ GET /dashboard 500 in 672ms (next.js: 12ms, proxy.ts: 647ms, application-code: 13ms)
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] Uncaught Error: ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./app/(protected)/admin/page.tsx:14:1)
+    at <unknown> (Error: (./app/(protected)/admin/page.tsx:14:1)
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+[browser] ./app/(protected)/admin/page.tsx:14:1
+Error: Export CalendarVideo doesn't exist in target module
+  12 | import { Textarea } from '@/components/ui/textarea'
+  13 | import { Badge } from '@/components/ui/badge'
+> 14 | import { 
+     | ^^^^^^^^
+> 15 |   Users, 
+     | ^^^^^^^^^
+> 16 |   FileText, 
+     | ^^^^^^^^^^^^
+> 17 |   Video, 
+     | ^^^^^^^^^
+> 18 |   Newspaper, 
+     | ^^^^^^^^^^^^^
+> 19 |   Home, 
+     | ^^^^^^^^
+> 20 |   LogOut, 
+     | ^^^^^^^^^^
+> 21 |   Trash2, 
+     | ^^^^^^^^^^
+> 22 |   Eye, 
+     | ^^^^^^^
+> 23 |   X, 
+     | ^^^^^
+> 24 |   PlusCircle, 
+     | ^^^^^^^^^^^^^^
+> 25 |   ExternalLink,
+     | ^^^^^^^^^^^^^^^
+> 26 |   CalendarVideo,
+     | ^^^^^^^^^^^^^^^^
+> 27 |   Send
+     | ^^^^^^
+> 28 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  29 |
+  30 | export default function AdminDashboard() {
+  31 |   const router = useRouter()
+
+The export CalendarVideo was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Calendar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(protected)/admin/page.tsx [Client Component Browser]
+    ./app/(protected)/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(protected)/admin/page.tsx [Client Component SSR]
+    ./app/(protected)/admin/page.tsx [Server Component] 
+✓ Compiled in 273ms
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /register 200 in 120ms (next.js: 19ms, application-code: 101ms)
+ GET /dashboard 200 in 1577ms (next.js: 32ms, proxy.ts: 942ms, application-code: 603ms)
+ GET /dashboard 200 in 3.0s (next.js: 3ms, proxy.ts: 1147ms, application-code: 1811ms)
+✓ Compiled in 61ms
+ GET /register 200 in 19ms (next.js: 3ms, application-code: 16ms)
+ GET /dashboard 200 in 561ms (next.js: 7ms, proxy.ts: 505ms, application-code: 50ms)
+ GET /dashboard 200 in 419ms (next.js: 4ms, proxy.ts: 365ms, application-code: 50ms)
+ GET /register 200 in 29ms (next.js: 10ms, application-code: 19ms)
+✓ Compiled in 38ms
+ GET /dashboard 200 in 1225ms (next.js: 3ms, proxy.ts: 1170ms, application-code: 52ms)
+ GET /dashboard 200 in 415ms (next.js: 5ms, proxy.ts: 364ms, application-code: 46ms)
+ GET /dashboard 200 in 3.3s (next.js: 4ms, proxy.ts: 896ms, application-code: 2.4s)
+ GET /register 200 in 42ms (next.js: 3ms, application-code: 38ms)
+ GET / 200 in 394ms (next.js: 4ms, application-code: 390ms)
+ GET /login 200 in 21ms (next.js: 4ms, application-code: 17ms)
+ GET /admin 200 in 1285ms (next.js: 8ms, proxy.ts: 1259ms, application-code: 17ms)
+ GET /admin 200 in 710ms (next.js: 4ms, proxy.ts: 685ms, application-code: 20ms)
+[browser] Uncaught ReferenceError: Label is not defined
+    at AdminDashboard (app/(protected)/admin/page.tsx:426:22)
+  424 |                 <form onSubmit={handleSaveMeeting} className="space-y-4">
+  425 |                   <div>
+> 426 |                     <Label className="text-xs font-semibold text-stone-800">Toplantı Başlığı</Label>
+      |                      ^
+  427 |                     <Input 
+  428 |                       name="title" 
+  429 |                       defaultValue={currentMeeting?.title || 'Pazartesi Canlı Grup Toplantısı'} 
+ GET /login 200 in 24ms (next.js: 4ms, application-code: 20ms)
+ GET / 200 in 471ms (next.js: 4ms, application-code: 467ms)
+ GET /register 200 in 22ms (next.js: 4ms, application-code: 18ms)
+ GET /admin 200 in 1714ms (next.js: 3ms, proxy.ts: 1627ms, application-code: 84ms)
+[browser] Uncaught ReferenceError: Label is not defined
+    at AdminDashboard (app/(protected)/admin/page.tsx:426:22)
+  424 |                 <form onSubmit={handleSaveMeeting} className="space-y-4">
+  425 |                   <div>
+> 426 |                     <Label className="text-xs font-semibold text-stone-800">Toplantı Başlığı</Label>
+      |                      ^
+  427 |                     <Input 
+  428 |                       name="title" 
+  429 |                       defaultValue={currentMeeting?.title || 'Pazartesi Canlı Grup Toplantısı'} 
+✓ Compiled in 60ms
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /admin 200 in 1427ms (next.js: 9ms, proxy.ts: 1371ms, application-code: 47ms)
+ GET /dashboard 200 in 2.9s (next.js: 7ms, proxy.ts: 998ms, application-code: 1883ms)
+ GET /dashboard 200 in 2.5s (next.js: 7ms, proxy.ts: 763ms, application-code: 1740ms)
+[browser] Base UI: A component is changing the default value state of an uncontrolled FieldControl after being initialized. To suppress this warning opt to use a controlled FieldControl. 
+ GET / 200 in 575ms (next.js: 3ms, application-code: 573ms)
+ GET /login 200 in 25ms (next.js: 4ms, application-code: 21ms)
+ GET /dashboard 200 in 2.2s (next.js: 3ms, proxy.ts: 499ms, application-code: 1694ms)
+ GET /dashboard 200 in 3.0s (next.js: 3ms, proxy.ts: 827ms, application-code: 2.2s)
+ GET / 200 in 510ms (next.js: 5ms, application-code: 506ms)
+ GET /login 200 in 20ms (next.js: 3ms, application-code: 17ms)
+ GET /dashboard 200 in 3.0s (next.js: 3ms, proxy.ts: 813ms, application-code: 2.2s)
+ GET / 200 in 581ms (next.js: 2ms, application-code: 578ms)
+ GET /login 200 in 21ms (next.js: 4ms, application-code: 18ms)
+ GET /admin 200 in 932ms (next.js: 4ms, proxy.ts: 909ms, application-code: 19ms)
+ GET /admin 200 in 805ms (next.js: 5ms, proxy.ts: 778ms, application-code: 21ms)
+ GET /admin 200 in 1053ms (next.js: 5ms, proxy.ts: 1011ms, application-code: 37ms)
+[browser] Base UI: A component is changing the default value state of an uncontrolled FieldControl after being initialized. To suppress this warning opt to use a controlled FieldControl. 
+ GET /login 200 in 20ms (next.js: 3ms, application-code: 17ms)
+ GET /admin 200 in 1343ms (next.js: 5ms, proxy.ts: 1319ms, application-code: 18ms)
+ GET /admin 200 in 699ms (next.js: 3ms, proxy.ts: 676ms, application-code: 19ms)
+ GET /login 200 in 40ms (next.js: 2ms, application-code: 38ms)
+ GET /dashboard 200 in 2.1s (next.js: 4ms, proxy.ts: 493ms, application-code: 1630ms)
+ GET /dashboard 200 in 1852ms (next.js: 6ms, proxy.ts: 380ms, application-code: 1466ms)
+ GET / 200 in 512ms (next.js: 3ms, application-code: 509ms)
+ GET /basvuru 200 in 22ms (next.js: 6ms, application-code: 15ms)
+✓ Compiled in 91ms
+✓ Compiled in 215ms
+ GET /basvuru 200 in 58ms (next.js: 15ms, application-code: 43ms)
+ GET /admin 200 in 2.1s (next.js: 7ms, proxy.ts: 2.0s, application-code: 33ms)
+ GET /admin 200 in 1952ms (next.js: 7ms, proxy.ts: 1926ms, application-code: 19ms)
+ GET /dashboard 200 in 4.9s (next.js: 35ms, proxy.ts: 1432ms, application-code: 3.5s)
+✓ Compiled in 185ms
+ GET /basvuru 200 in 51ms (next.js: 7ms, application-code: 43ms)
+ GET /dashboard 200 in 960ms (next.js: 7ms, proxy.ts: 913ms, application-code: 40ms)
+ GET /admin 200 in 1318ms (next.js: 6ms, proxy.ts: 1276ms, application-code: 36ms)
+ GET /admin 200 in 1116ms (next.js: 7ms, proxy.ts: 1088ms, application-code: 21ms)
+ GET / 200 in 1122ms (next.js: 3ms, application-code: 1119ms)
+ GET /login 200 in 17ms (next.js: 3ms, application-code: 14ms)
+ GET /dashboard 200 in 2.9s (next.js: 4ms, proxy.ts: 815ms, application-code: 2.1s)
+ GET /dashboard 200 in 3.0s (next.js: 4ms, proxy.ts: 423ms, application-code: 2.6s)
+ GET / 200 in 472ms (next.js: 5ms, application-code: 467ms)
+ GET / 200 in 654ms (next.js: 3ms, application-code: 651ms)
+ GET /login 200 in 17ms (next.js: 3ms, application-code: 14ms)
+ GET /dashboard 200 in 2.6s (next.js: 4ms, proxy.ts: 497ms, application-code: 2.1s)
+ GET /dashboard 200 in 2.4s (next.js: 4ms, proxy.ts: 475ms, application-code: 1899ms)
+ GET / 200 in 386ms (next.js: 3ms, application-code: 382ms)
+ GET /login 200 in 24ms (next.js: 3ms, application-code: 21ms)
+ GET /admin 200 in 1038ms (next.js: 7ms, proxy.ts: 1010ms, application-code: 21ms)
+ GET /admin 200 in 1134ms (next.js: 7ms, proxy.ts: 1104ms, application-code: 24ms)
+ GET / 200 in 437ms (next.js: 4ms, application-code: 433ms)
+ GET /login 200 in 21ms (next.js: 3ms, application-code: 19ms)
+ GET /dashboard 200 in 2.6s (next.js: 4ms, proxy.ts: 492ms, application-code: 2.1s)
+ GET /dashboard 200 in 2.9s (next.js: 5ms, proxy.ts: 906ms, application-code: 1996ms)
+ GET / 200 in 373ms (next.js: 5ms, application-code: 368ms)
+ GET /login 200 in 23ms (next.js: 6ms, application-code: 17ms)
+ GET /dashboard 200 in 2.8s (next.js: 4ms, proxy.ts: 906ms, application-code: 1915ms)
+ GET /dashboard 200 in 3.2s (next.js: 4ms, proxy.ts: 492ms, application-code: 2.7s)
+ GET / 200 in 367ms (next.js: 2ms, application-code: 364ms)
+ GET /login 200 in 19ms (next.js: 3ms, application-code: 17ms)
+ GET /admin 200 in 817ms (next.js: 7ms, proxy.ts: 794ms, application-code: 17ms)
+ GET /admin 200 in 1201ms (next.js: 9ms, proxy.ts: 1163ms, application-code: 30ms)
+✓ Compiled in 117ms
+ GET /basvuru 200 in 42ms (next.js: 17ms, application-code: 25ms)
+ GET /admin 200 in 1497ms (next.js: 11ms, proxy.ts: 1458ms, application-code: 28ms)
+ GET /dashboard 200 in 2.3s (next.js: 3ms, proxy.ts: 666ms, application-code: 1670ms)
+ GET /admin 200 in 848ms (next.js: 18ms, proxy.ts: 810ms, application-code: 19ms)
+✓ Compiled in 26ms
+ GET / 200 in 1824ms (next.js: 27ms, application-code: 1796ms)
+ GET /admin 200 in 1353ms (next.js: 8ms, proxy.ts: 1330ms, application-code: 16ms)
+ GET / 200 in 1685ms (next.js: 3ms, application-code: 1682ms)
+ GET / 200 in 673ms (next.js: 3ms, application-code: 670ms)
+ GET /login 200 in 25ms (next.js: 4ms, proxy.ts: 5ms, application-code: 16ms)
+ GET /dashboard 200 in 2.5s (next.js: 4ms, proxy.ts: 908ms, application-code: 1606ms)
+ GET /dashboard 200 in 2.1s (next.js: 4ms, proxy.ts: 385ms, application-code: 1743ms)
+ GET / 200 in 1048ms (next.js: 3ms, application-code: 1045ms)
+ GET /dashboard 200 in 1939ms (next.js: 5ms, proxy.ts: 350ms, application-code: 1584ms)
+ GET / 200 in 1919ms (next.js: 3ms, application-code: 1916ms)
+ GET /dashboard 200 in 2.8s (next.js: 7ms, proxy.ts: 835ms, application-code: 1955ms)
+ GET / 200 in 1456ms (next.js: 3ms, application-code: 1454ms)
