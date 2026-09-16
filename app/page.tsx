@@ -17,10 +17,37 @@ import {
   ShieldAlert
 } from 'lucide-react'
 
+// Saf SVG Instagram İkonu
+function InstagramIcon({ className = "w-4 h-4" }: { className?: string }) {
+  return (
+    <svg 
+      className={className} 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke="currentColor" 
+      strokeWidth="2" 
+      strokeLinecap="round" 
+      strokeLinejoin="round"
+    >
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </svg>
+  )
+}
+
+// YouTube linkinden embed url çıkarıcı
+function getEmbedUrl(url: string | null) {
+  if (!url) return null
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/
+  const match = url.match(regExp)
+  return match && match[2].length === 11 ? `https://www.youtube.com/embed/${match[2]}` : null
+}
+
 export default async function LandingPage() {
   const supabase = await createClient()
 
-  // 1. Giriş Yapmış Kullanıcı Var mı ve Rolü Ne?
+  // Giriş Yapmış Kullanıcı Var mı ve Rolü Ne?
   const { data: { user } } = await supabase.auth.getUser()
   
   let userRole: 'admin' | 'user' | null = null
@@ -33,7 +60,7 @@ export default async function LandingPage() {
     userRole = profile?.role || 'user'
   }
 
-  // 2. Adminin Eklediği Güncel Postları Çek
+  // Adminin Eklediği Güncel Postları Çek
   const { data: posts } = await supabase
     .from('posts')
     .select('*')
@@ -42,7 +69,7 @@ export default async function LandingPage() {
 
   return (
     <div className="flex flex-col min-h-screen bg-stone-50/50 scroll-smooth">
-      {/* 1. Akıllı Navbar */}
+      {/* 1. Navbar */}
       <header className="px-6 md:px-12 h-20 flex items-center justify-between border-b border-orange-100 bg-white/90 backdrop-blur-md sticky top-0 z-50">
         <Link href="/" className="flex items-center gap-2">
           <div className="w-9 h-9 rounded-xl bg-orange-600 flex items-center justify-center text-white font-extrabold text-lg shadow-sm">
@@ -60,28 +87,21 @@ export default async function LandingPage() {
           <a href="#iletisim" className="hover:text-orange-600 transition-colors">İletişim & Randevu</a>
         </nav>
 
-        {/* Dinamik Butonlar: Oturum Durumuna Göre Değişir */}
         <div className="flex gap-2.5 items-center">
           {user ? (
-            // Giriş Yapmış Kullanıcı İçin Panel Linki ve Çıkış
             <>
               <Link href={userRole === 'admin' ? '/admin' : '/dashboard'}>
                 <Button className="bg-orange-600 hover:bg-orange-700 text-white font-semibold text-xs md:text-sm">
                   {userRole === 'admin' ? (
-                    <>
-                      <ShieldAlert className="w-4 h-4 mr-1.5" /> Yönetim Paneli
-                    </>
+                    <><ShieldAlert className="w-4 h-4 mr-1.5" /> Yönetim Paneli</>
                   ) : (
-                    <>
-                      <LayoutDashboard className="w-4 h-4 mr-1.5" /> Danışan Panelim
-                    </>
+                    <><LayoutDashboard className="w-4 h-4 mr-1.5" /> Danışan Panelim</>
                   )}
                 </Button>
               </Link>
               <SignOutButton />
             </>
           ) : (
-            // Giriş Yapmamış Ziyaretçi İçin
             <>
               <Link href="/login">
                 <Button variant="ghost" className="text-orange-950 hover:bg-orange-50 font-semibold text-xs md:text-sm">
@@ -98,7 +118,7 @@ export default async function LandingPage() {
         </div>
       </header>
 
-      {/* 2. Hero Bölümü */}
+      {/* 2. Hero */}
       <section className="bg-gradient-to-br from-orange-600 via-orange-500 to-amber-600 text-white py-24 md:py-36 px-6 relative overflow-hidden">
         <div className="absolute -right-20 -top-20 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute left-10 bottom-0 w-80 h-80 bg-black/10 rounded-full blur-2xl pointer-events-none" />
@@ -201,7 +221,7 @@ export default async function LandingPage() {
         </div>
       </section>
 
-      {/* 5. Güncel Yazılar & Duyurular */}
+      {/* 5. Güncel Yazılar & Duyurular (Saf SVG Instagram ile) */}
       <section id="yazilar" className="py-24 px-6 max-w-6xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <span className="text-orange-600 font-bold uppercase text-xs tracking-wider inline-flex items-center gap-1.5 bg-orange-100/60 px-3 py-1 rounded-full">
@@ -213,36 +233,58 @@ export default async function LandingPage() {
 
         {posts && posts.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {posts.map((post) => (
-              <Card key={post.id} className="overflow-hidden border-orange-100 shadow-xs hover:shadow-md transition-shadow bg-white flex flex-col justify-between">
-                {post.image_url && (
-                  <div className="h-48 w-full overflow-hidden bg-stone-100">
-                    <img src={post.image_url} alt={post.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
-                  </div>
-                )}
-                <CardContent className="p-6 flex-1 flex flex-col justify-between">
-                  <div>
-                    <span className="text-[11px] font-semibold text-orange-600 uppercase tracking-wider block mb-1">
-                      {new Date(post.created_at).toLocaleDateString('tr-TR')}
-                    </span>
-                    <h3 className="text-lg font-bold text-stone-900 mb-2">{post.title}</h3>
-                    <p className="text-xs text-stone-600 line-clamp-3 mb-4 leading-relaxed">
-                      {post.content}
-                    </p>
-                  </div>
-                  {post.link_url && (
-                    <a
-                      href={post.link_url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-xs font-bold text-orange-600 hover:text-orange-700 hover:underline pt-2 border-t border-stone-100"
-                    >
-                      İçeriği / Videoyu İncele <ExternalLink className="w-3 h-3" />
-                    </a>
-                  )}
-                </CardContent>
-              </Card>
-            ))}
+            {posts.map((post) => {
+              const youtubeEmbed = getEmbedUrl(post.link_url)
+              const isInstagram = post.link_url && post.link_url.includes('instagram.com')
+
+              return (
+                <Card key={post.id} className="overflow-hidden border-orange-100 shadow-xs hover:shadow-md transition-shadow bg-white flex flex-col justify-between">
+                  {youtubeEmbed ? (
+                    <div className="aspect-video w-full bg-stone-900">
+                      <iframe
+                        src={youtubeEmbed}
+                        className="w-full h-full"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        title={post.title}
+                      />
+                    </div>
+                  ) : post.image_url ? (
+                    <div className="h-48 w-full overflow-hidden bg-stone-100 relative">
+                      <img src={post.image_url} alt={post.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                      {isInstagram && (
+                        <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-md p-1.5 rounded-full text-pink-600 shadow-sm">
+                          <InstagramIcon className="w-4 h-4" />
+                        </div>
+                      )}
+                    </div>
+                  ) : null}
+
+                  <CardContent className="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                      <span className="text-[11px] font-semibold text-orange-600 uppercase tracking-wider block mb-1">
+                        {new Date(post.created_at).toLocaleDateString('tr-TR')}
+                      </span>
+                      <h3 className="text-lg font-bold text-stone-900 mb-2">{post.title}</h3>
+                      <p className="text-xs text-stone-600 line-clamp-3 mb-4 leading-relaxed">
+                        {post.content}
+                      </p>
+                    </div>
+
+                    {post.link_url && (
+                      <a
+                        href={post.link_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-xs font-bold text-orange-600 hover:text-orange-700 hover:underline pt-2 border-t border-stone-100"
+                      >
+                        {isInstagram ? 'Instagram\'da İzle' : 'Bağlantıyı Aç'} <ExternalLink className="w-3 h-3" />
+                      </a>
+                    )}
+                  </CardContent>
+                </Card>
+              )
+            })}
           </div>
         ) : (
           <div className="text-center py-12 bg-white rounded-2xl border border-dashed border-orange-200">
@@ -251,7 +293,7 @@ export default async function LandingPage() {
         )}
       </section>
 
-      {/* 6. İletişim & Randevu */}
+      {/* 6. İletişim */}
       <section id="iletisim" className="py-20 max-w-4xl mx-auto px-6 text-center">
         <div className="bg-white p-10 md:p-12 rounded-3xl border border-orange-200 shadow-sm space-y-6">
           <h2 className="text-3xl font-extrabold text-stone-900">İletişim & Randevu Süreci</h2>

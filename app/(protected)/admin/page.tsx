@@ -23,7 +23,10 @@ import {
   X, 
   PlusCircle, 
   ExternalLink,
-  Calendar
+  Calendar,
+  Image as ImageIcon,
+  Edit2,
+  Check
 } from 'lucide-react'
 
 export default function AdminDashboard() {
@@ -36,7 +39,12 @@ export default function AdminDashboard() {
   const [posts, setPosts] = useState<any[]>([])
   const [currentMeeting, setCurrentMeeting] = useState<any | null>(null)
   const [selectedForm, setSelectedForm] = useState<any | null>(null)
+  
   const [meetingLoading, setMeetingLoading] = useState(false)
+  const [postLoading, setPostLoading] = useState(false)
+
+  // Düzenlenen Post State'i (null ise yeni ekleme modundadır)
+  const [editingPost, setEditingPost] = useState<any | null>(null)
 
   useEffect(() => {
     fetchData()
@@ -97,25 +105,83 @@ export default function AdminDashboard() {
     fetchData()
   }
 
-  async function handleAddPost(e: React.FormEvent<HTMLFormElement>) {
+  // Yazı Ekleme ve Güncelleme (Upsert) Fonksiyonu
+  async function handleSavePost(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
+    setPostLoading(true)
     const form = e.currentTarget
     const formData = new FormData(form)
 
-    await supabase.from('posts').insert([{
-      title: formData.get('title'),
-      content: formData.get('content'),
-      image_url: formData.get('image_url') || null,
-      link_url: formData.get('link_url') || null,
-    }])
+    let finalImageUrl = (formData.get('image_url') as string) || (editingPost?.image_url || null)
+    const file = (formData.get('image_file') as File)
+
+    // Yeni dosya seçildiyse storage'a yükle
+    if (file && file.size > 0) {
+      const fileExt = file.name.split('.').pop()
+      const fileName = `${Date.now()}-${Math.random().toString(36).substring(2)}.${fileExt}`
+
+      const { error: uploadError } = await supabase.storage
+        .from('post-images')
+        .upload(fileName, file)
+
+      if (uploadError) {
+        alert('Görsel yüklenirken hata: ' + uploadError.message)
+        setPostLoading(false)
+        return
+      }
+
+      const { data: urlData } = supabase.storage
+        .from('post-images')
+        .getPublicUrl(fileName)
+
+      finalImageUrl = urlData.publicUrl
+    }
+
+    if (editingPost) {
+      // GÜNCELLEME (UPDATE)
+      const { error } = await supabase
+        .from('posts')
+        .update({
+          title: formData.get('title'),
+          content: formData.get('content'),
+          image_url: finalImageUrl,
+          link_url: formData.get('link_url') || null,
+        })
+        .eq('id', editingPost.id)
+
+      if (error) {
+        alert('Güncelleme hatası: ' + error.message)
+      } else {
+        setEditingPost(null)
+      }
+    } else {
+      // YENİ EKLEME (INSERT)
+      await supabase.from('posts').insert([{
+        title: formData.get('title'),
+        content: formData.get('content'),
+        image_url: finalImageUrl,
+        link_url: formData.get('link_url') || null,
+      }])
+    }
 
     form.reset()
+    setPostLoading(false)
     fetchData()
+  }
+
+  function startEditPost(post: any) {
+    setEditingPost(post)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  function cancelEditPost() {
+    setEditingPost(null)
   }
 
   async function deletePost(id: string) {
     if (!confirm('Yazıyı silmek istediğinize emin misiniz?')) return
     await supabase.from('posts').delete().eq('id', id)
+    if (editingPost?.id === id) setEditingPost(null)
     fetchData()
   }
 
@@ -146,7 +212,6 @@ export default function AdminDashboard() {
 
   return (
     <div className="min-h-screen bg-stone-50/60 flex flex-col md:flex-row">
-      {/* Sol Sidebar */}
       <aside className="w-full md:w-64 bg-white border-r border-stone-200 p-6 flex flex-col justify-between shrink-0">
         <div className="space-y-6">
           <div className="flex items-center gap-2 px-2">
@@ -247,7 +312,6 @@ export default function AdminDashboard() {
         </div>
       </aside>
 
-      {/* Sağ İçerik */}
       <main className="flex-1 p-6 md:p-10 max-w-6xl">
         {/* SEKME 1: BAŞVURULAR */}
         {activeMenu === 'forms' && (
@@ -350,7 +414,7 @@ export default function AdminDashboard() {
           </div>
         )}
 
-        {/* SEKME 2: DANIŞAN YÖNETİMİ & BELİRGİN SWITCH BUTONU */}
+        {/* SEKME 2: DANIŞAN YÖNETİMİ */}
         {activeMenu === 'users' && (
           <div className="space-y-6">
             <div>
@@ -366,7 +430,7 @@ export default function AdminDashboard() {
                       <TableHead>Email</TableHead>
                       <TableHead>Rol</TableHead>
                       <TableHead>Erişim Durumu</TableHead>
-                      <TableHead className="text-right">Yetkilendirme Butonu</TableHead>
+                      <TableHead className="text-right">Yetkilendirme</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
@@ -410,7 +474,7 @@ export default function AdminDashboard() {
           </div>
         )}
 
-        {/* SEKME 3: CANLI TOPLANTI (FieldControl Hatası Çözüldü) */}
+        {/* SEKME 3: CANLI TOPLANTI */}
         {activeMenu === 'meeting' && (
           <div className="space-y-6">
             <div>
@@ -430,7 +494,6 @@ export default function AdminDashboard() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                {/* key eklenerek defaultValue konsol uyarısı giderildi */}
                 <form key={currentMeeting?.id || 'new-meeting'} onSubmit={handleSaveMeeting} className="space-y-4">
                   <div>
                     <Label className="text-xs font-semibold text-stone-800">Toplantı Başlığı</Label>
@@ -536,28 +599,138 @@ export default function AdminDashboard() {
           </div>
         )}
 
-        {/* SEKME 5: YAZILAR & DUYURULAR */}
+        {/* SEKME 5: YAZILAR & DUYURULAR (DÜZENLEME / EDIT ÖZELLİKLİ) */}
         {activeMenu === 'posts' && (
           <div className="space-y-6">
-            <h2 className="text-2xl font-bold text-stone-900">Yazılar & Duyurular</h2>
-            <Card className="border-stone-200/80 shadow-xs bg-white">
-              <CardHeader><CardTitle className="text-base font-bold text-stone-900">Yeni İçerik Yayınla</CardTitle></CardHeader>
+            <div className="flex justify-between items-center">
+              <div>
+                <h2 className="text-2xl font-bold text-stone-900">Yazılar & Duyurular</h2>
+                <p className="text-xs text-muted-foreground mt-0.5">Ana sayfada yayınlanan içerikleri yönetin, düzenleyin veya yeni duyuru ekleyin</p>
+              </div>
+              {editingPost && (
+                <Button variant="outline" size="sm" onClick={cancelEditPost} className="text-stone-600 cursor-pointer">
+                  <X className="w-4 h-4 mr-1.5" /> Düzenlemeden Vazgeç
+                </Button>
+              )}
+            </div>
+
+            {/* FORM ALANI (Hem Yeni Ekleme Hem Düzenleme İçin Çalışır) */}
+            <Card className={`border shadow-xs bg-white ${editingPost ? 'border-orange-500 ring-2 ring-orange-500/20' : 'border-stone-200/80'}`}>
+              <CardHeader>
+                <CardTitle className="text-base font-bold text-stone-900 flex items-center gap-2">
+                  {editingPost ? (
+                    <>
+                      <Edit2 className="w-4 h-4 text-orange-600" /> İçeriği Düzenle: "{editingPost.title}"
+                    </>
+                  ) : (
+                    <>
+                      <PlusCircle className="w-4 h-4 text-orange-600" /> Yeni İçerik / Duyuru Yayınla
+                    </>
+                  )}
+                </CardTitle>
+                {editingPost && (
+                  <CardDescription className="text-xs text-orange-800">
+                    Aşağıdaki alanları düzenleyip "Değişiklikleri Güncelle" butonuna basarak kaydedebilirsiniz.
+                  </CardDescription>
+                )}
+              </CardHeader>
               <CardContent>
-                <form onSubmit={handleAddPost} className="space-y-3 max-w-xl">
-                  <Input name="title" placeholder="Başlık (Örn: Yeni Instagram Videomuz Yayında!)" required />
-                  <Textarea name="content" rows={3} placeholder="İçerik yazısı veya kısa özet..." required />
-                  <Input name="image_url" placeholder="Görsel Linki (Örn: https://images.unsplash.com/...)" />
-                  <Input name="link_url" placeholder="Instagram / Dış Bağlantı Linki" />
-                  <Button type="submit" className="bg-orange-600 hover:bg-orange-700 text-white font-semibold cursor-pointer">
-                    <PlusCircle className="w-4 h-4 mr-1.5" /> Ana Sayfada Yayınla
-                  </Button>
+                <form key={editingPost ? editingPost.id : 'new-post'} onSubmit={handleSavePost} className="space-y-4 max-w-xl">
+                  <div>
+                    <Label className="text-xs font-semibold text-stone-800">Başlık *</Label>
+                    <Input 
+                      name="title" 
+                      defaultValue={editingPost?.title || ''} 
+                      placeholder="Örn: Yeni Instagram Videomuz Yayında!" 
+                      required 
+                    />
+                  </div>
+
+                  <div>
+                    <Label className="text-xs font-semibold text-stone-800">İçerik Yazısı veya Açıklama *</Label>
+                    <Textarea 
+                      name="content" 
+                      rows={3} 
+                      defaultValue={editingPost?.content || ''} 
+                      placeholder="Duyuru detayları, makale metni veya video açıklaması..." 
+                      required 
+                    />
+                  </div>
+
+                  {/* Görsel Yönetimi */}
+                  <div className="p-3.5 bg-stone-50 rounded-xl border border-stone-200 space-y-3">
+                    <Label className="text-xs font-bold text-stone-900 flex items-center gap-1.5">
+                      <ImageIcon className="w-4 h-4 text-orange-600" /> Görsel
+                    </Label>
+                    
+                    {editingPost?.image_url && (
+                      <div className="flex items-center gap-3 p-2 bg-white rounded-lg border border-stone-200 text-xs">
+                        <img src={editingPost.image_url} alt="Mevcut" className="w-12 h-12 object-cover rounded" />
+                        <div className="flex-1 min-w-0">
+                          <span className="font-semibold text-stone-800 block truncate">Mevcut Görsel</span>
+                          <span className="text-[11px] text-muted-foreground block truncate">Yeni dosya seçmezseniz bu görsel korunur.</span>
+                        </div>
+                      </div>
+                    )}
+
+                    <div>
+                      <span className="text-[11px] text-muted-foreground block mb-1">
+                        {editingPost ? 'Görseli değiştirmek için yeni dosya seçin:' : 'Cihazınızdan dosya seçin:'}
+                      </span>
+                      <Input 
+                        name="image_file" 
+                        type="file" 
+                        accept="image/*" 
+                        className="bg-white file:mr-3 file:py-1 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-orange-50 file:text-orange-700 hover:file:bg-orange-100 cursor-pointer" 
+                      />
+                    </div>
+
+                    <div className="pt-1">
+                      <span className="text-[11px] text-muted-foreground block mb-1">Veya harici bir görsel linki yapıştırın:</span>
+                      <Input 
+                        name="image_url" 
+                        defaultValue={editingPost?.image_url || ''} 
+                        placeholder="https://..." 
+                        className="bg-white text-xs" 
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <Label className="text-xs font-semibold text-stone-800">Yönlendirme Linki (Instagram / YouTube vb.)</Label>
+                    <Input 
+                      name="link_url" 
+                      defaultValue={editingPost?.link_url || ''} 
+                      placeholder="Örn: https://www.instagram.com/p/... veya https://youtube.com/..." 
+                    />
+                  </div>
+
+                  <div className="flex gap-2 pt-2">
+                    <Button type="submit" disabled={postLoading} className="flex-1 bg-orange-600 hover:bg-orange-700 text-white font-semibold cursor-pointer">
+                      {postLoading ? (
+                        'İşleniyor...'
+                      ) : editingPost ? (
+                        <><Check className="w-4 h-4 mr-1.5" /> Değişiklikleri Güncelle</>
+                      ) : (
+                        <><PlusCircle className="w-4 h-4 mr-1.5" /> Ana Sayfada Yayınla</>
+                      )}
+                    </Button>
+                    {editingPost && (
+                      <Button type="button" variant="outline" onClick={cancelEditPost} className="cursor-pointer">
+                        Vazgeç
+                      </Button>
+                    )}
+                  </div>
                 </form>
               </CardContent>
             </Card>
 
+            {/* MEVCUT YAZILAR LİSTESİ */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {posts.map((post) => (
-                <Card key={post.id} className="border-stone-200/80 shadow-xs bg-white flex flex-col justify-between overflow-hidden">
+                <Card key={post.id} className={`border shadow-xs bg-white flex flex-col justify-between overflow-hidden transition-all ${
+                  editingPost?.id === post.id ? 'ring-2 ring-orange-500 border-orange-500' : 'border-stone-200/80'
+                }`}>
                   {post.image_url && (
                     <div className="h-44 w-full overflow-hidden bg-stone-100">
                       <img src={post.image_url} alt={post.title} className="w-full h-full object-cover" />
@@ -575,9 +748,24 @@ export default function AdminDashboard() {
                     </div>
                     <div className="flex justify-between items-center pt-3 border-t border-stone-100 mt-3">
                       <span className="text-[11px] text-muted-foreground">{new Date(post.created_at).toLocaleDateString('tr-TR')}</span>
-                      <Button variant="ghost" size="icon" onClick={() => deletePost(post.id)} className="cursor-pointer">
-                        <Trash2 className="w-4 h-4 text-red-500" />
-                      </Button>
+                      <div className="flex items-center gap-1">
+                        <Button 
+                          variant="ghost" 
+                          size="sm" 
+                          onClick={() => startEditPost(post)}
+                          className="text-stone-600 hover:text-orange-600 hover:bg-orange-50 h-8 px-2.5 text-xs cursor-pointer"
+                        >
+                          <Edit2 className="w-3.5 h-3.5 mr-1" /> Düzenle
+                        </Button>
+                        <Button 
+                          variant="ghost" 
+                          size="icon" 
+                          onClick={() => deletePost(post.id)}
+                          className="text-stone-400 hover:text-red-600 h-8 w-8 cursor-pointer"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </Button>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>

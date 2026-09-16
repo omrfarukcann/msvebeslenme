@@ -3685,3 +3685,554 @@ Import traces:
  GET / 200 in 1919ms (next.js: 3ms, application-code: 1916ms)
  GET /dashboard 200 in 2.8s (next.js: 7ms, proxy.ts: 835ms, application-code: 1955ms)
  GET / 200 in 1456ms (next.js: 3ms, application-code: 1454ms)
+ GET /dashboard 307 in 817ms (proxy.ts: 812ms)
+ GET /dashboard 200 in 2.8s (next.js: 5ms, proxy.ts: 395ms, application-code: 2.4s)
+ GET / 200 in 1771ms (next.js: 3ms, application-code: 1768ms)
+ GET / 200 in 591ms (next.js: 3ms, application-code: 588ms)
+ GET /login 200 in 24ms (next.js: 4ms, proxy.ts: 6ms, application-code: 15ms)
+ GET /admin 200 in 828ms (next.js: 6ms, proxy.ts: 805ms, application-code: 18ms)
+ GET /admin 200 in 804ms (next.js: 7ms, proxy.ts: 778ms, application-code: 20ms)
+✓ Compiled in 123ms
+ GET /basvuru 200 in 47ms (next.js: 14ms, application-code: 33ms)
+ GET /admin 200 in 2.2s (next.js: 6ms, proxy.ts: 2.2s, application-code: 22ms)
+ GET /dashboard 200 in 4.2s (next.js: 6ms, proxy.ts: 1024ms, application-code: 3.2s)
+✓ Compiled in 2.6s
+[browser] ./app/page.tsx:6:1
+Error: Export Instagram doesn't exist in target module
+   4 | import { Card, CardContent } from '@/components/ui/card'
+   5 | import { SignOutButton } from '@/components/SignOutButton'
+>  6 | import { 
+     | ^^^^^^^^
+>  7 |   ArrowRight, 
+     | ^^^^^^^^^^^^^^
+>  8 |   Flame, 
+     | ^^^^^^^^^
+>  9 |   HeartPulse, 
+     | ^^^^^^^^^^^^^^
+> 10 |   ShieldCheck, 
+     | ^^^^^^^^^^^^^^^
+> 11 |   Video, 
+     | ^^^^^^^^^
+> 12 |   CalendarCheck, 
+     | ^^^^^^^^^^^^^^^^^
+> 13 |   MessageCircle, 
+     | ^^^^^^^^^^^^^^^^^
+> 14 |   ExternalLink, 
+     | ^^^^^^^^^^^^^^^^
+> 15 |   Newspaper,
+     | ^^^^^^^^^^^^
+> 16 |   LayoutDashboard,
+     | ^^^^^^^^^^^^^^^^^^
+> 17 |   ShieldAlert,
+     | ^^^^^^^^^^^^^^
+> 18 |   Instagram
+     | ^^^^^^^^^^^
+> 19 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | // YouTube linkinden embed url çıkarıcı
+  22 | function getEmbedUrl(url: string | null) {
+
+The export Instagram was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-rsc] (ecmascript).
+Did you mean to import Star?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist. 
+[browser] ./app/page.tsx:6:1
+Error: Export Instagram doesn't exist in target module
+   4 | import { Card, CardContent } from '@/components/ui/card'
+   5 | import { SignOutButton } from '@/components/SignOutButton'
+>  6 | import { 
+     | ^^^^^^^^
+>  7 |   ArrowRight, 
+     | ^^^^^^^^^^^^^^
+>  8 |   Flame, 
+     | ^^^^^^^^^
+>  9 |   HeartPulse, 
+     | ^^^^^^^^^^^^^^
+> 10 |   ShieldCheck, 
+     | ^^^^^^^^^^^^^^^
+> 11 |   Video, 
+     | ^^^^^^^^^
+> 12 |   CalendarCheck, 
+     | ^^^^^^^^^^^^^^^^^
+> 13 |   MessageCircle, 
+     | ^^^^^^^^^^^^^^^^^
+> 14 |   ExternalLink, 
+     | ^^^^^^^^^^^^^^^^
+> 15 |   Newspaper,
+     | ^^^^^^^^^^^^
+> 16 |   LayoutDashboard,
+     | ^^^^^^^^^^^^^^^^^^
+> 17 |   ShieldAlert,
+     | ^^^^^^^^^^^^^^
+> 18 |   Instagram
+     | ^^^^^^^^^^^
+> 19 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | // YouTube linkinden embed url çıkarıcı
+  22 | function getEmbedUrl(url: string | null) {
+
+The export Instagram was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-rsc] (ecmascript).
+Did you mean to import Star?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist. 
+ GET /admin 500 in 1731ms (next.js: 18ms, proxy.ts: 1698ms, application-code: 15ms)
+[browser] ./app/page.tsx:6:1
+Error: Export Instagram doesn't exist in target module
+   4 | import { Card, CardContent } from '@/components/ui/card'
+   5 | import { SignOutButton } from '@/components/SignOutButton'
+>  6 | import { 
+     | ^^^^^^^^
+>  7 |   ArrowRight, 
+     | ^^^^^^^^^^^^^^
+>  8 |   Flame, 
+     | ^^^^^^^^^
+>  9 |   HeartPulse, 
+     | ^^^^^^^^^^^^^^
+> 10 |   ShieldCheck, 
+     | ^^^^^^^^^^^^^^^
+> 11 |   Video, 
+     | ^^^^^^^^^
+> 12 |   CalendarCheck, 
+     | ^^^^^^^^^^^^^^^^^
+> 13 |   MessageCircle, 
+     | ^^^^^^^^^^^^^^^^^
+> 14 |   ExternalLink, 
+     | ^^^^^^^^^^^^^^^^
+> 15 |   Newspaper,
+     | ^^^^^^^^^^^^
+> 16 |   LayoutDashboard,
+     | ^^^^^^^^^^^^^^^^^^
+> 17 |   ShieldAlert,
+     | ^^^^^^^^^^^^^^
+> 18 |   Instagram
+     | ^^^^^^^^^^^
+> 19 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | // YouTube linkinden embed url çıkarıcı
+  22 | function getEmbedUrl(url: string | null) {
+
+The export Instagram was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-rsc] (ecmascript).
+Did you mean to import Star?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist. 
+[browser] Uncaught Error: ./app/page.tsx:6:1
+Error: Export Instagram doesn't exist in target module
+   4 | import { Card, CardContent } from '@/components/ui/card'
+   5 | import { SignOutButton } from '@/components/SignOutButton'
+>  6 | import { 
+     | ^^^^^^^^
+>  7 |   ArrowRight, 
+     | ^^^^^^^^^^^^^^
+>  8 |   Flame, 
+     | ^^^^^^^^^
+>  9 |   HeartPulse, 
+     | ^^^^^^^^^^^^^^
+> 10 |   ShieldCheck, 
+     | ^^^^^^^^^^^^^^^
+> 11 |   Video, 
+     | ^^^^^^^^^
+> 12 |   CalendarCheck, 
+     | ^^^^^^^^^^^^^^^^^
+> 13 |   MessageCircle, 
+     | ^^^^^^^^^^^^^^^^^
+> 14 |   ExternalLink, 
+     | ^^^^^^^^^^^^^^^^
+> 15 |   Newspaper,
+     | ^^^^^^^^^^^^
+> 16 |   LayoutDashboard,
+     | ^^^^^^^^^^^^^^^^^^
+> 17 |   ShieldAlert,
+     | ^^^^^^^^^^^^^^
+> 18 |   Instagram
+     | ^^^^^^^^^^^
+> 19 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | // YouTube linkinden embed url çıkarıcı
+  22 | function getEmbedUrl(url: string | null) {
+
+The export Instagram was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-rsc] (ecmascript).
+Did you mean to import Star?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+
+    at <unknown> (Error: ./app/page.tsx:6:1)
+    at <unknown> (Error: (./app/page.tsx:6:1)
+[browser] ./app/page.tsx:6:1
+Error: Export Instagram doesn't exist in target module
+   4 | import { Card, CardContent } from '@/components/ui/card'
+   5 | import { SignOutButton } from '@/components/SignOutButton'
+>  6 | import { 
+     | ^^^^^^^^
+>  7 |   ArrowRight, 
+     | ^^^^^^^^^^^^^^
+>  8 |   Flame, 
+     | ^^^^^^^^^
+>  9 |   HeartPulse, 
+     | ^^^^^^^^^^^^^^
+> 10 |   ShieldCheck, 
+     | ^^^^^^^^^^^^^^^
+> 11 |   Video, 
+     | ^^^^^^^^^
+> 12 |   CalendarCheck, 
+     | ^^^^^^^^^^^^^^^^^
+> 13 |   MessageCircle, 
+     | ^^^^^^^^^^^^^^^^^
+> 14 |   ExternalLink, 
+     | ^^^^^^^^^^^^^^^^
+> 15 |   Newspaper,
+     | ^^^^^^^^^^^^
+> 16 |   LayoutDashboard,
+     | ^^^^^^^^^^^^^^^^^^
+> 17 |   ShieldAlert,
+     | ^^^^^^^^^^^^^^
+> 18 |   Instagram
+     | ^^^^^^^^^^^
+> 19 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | // YouTube linkinden embed url çıkarıcı
+  22 | function getEmbedUrl(url: string | null) {
+
+The export Instagram was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-rsc] (ecmascript).
+Did you mean to import Star?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist. 
+[browser] ./app/page.tsx:6:1
+Error: Export Instagram doesn't exist in target module
+   4 | import { Card, CardContent } from '@/components/ui/card'
+   5 | import { SignOutButton } from '@/components/SignOutButton'
+>  6 | import { 
+     | ^^^^^^^^
+>  7 |   ArrowRight, 
+     | ^^^^^^^^^^^^^^
+>  8 |   Flame, 
+     | ^^^^^^^^^
+>  9 |   HeartPulse, 
+     | ^^^^^^^^^^^^^^
+> 10 |   ShieldCheck, 
+     | ^^^^^^^^^^^^^^^
+> 11 |   Video, 
+     | ^^^^^^^^^
+> 12 |   CalendarCheck, 
+     | ^^^^^^^^^^^^^^^^^
+> 13 |   MessageCircle, 
+     | ^^^^^^^^^^^^^^^^^
+> 14 |   ExternalLink, 
+     | ^^^^^^^^^^^^^^^^
+> 15 |   Newspaper,
+     | ^^^^^^^^^^^^
+> 16 |   LayoutDashboard,
+     | ^^^^^^^^^^^^^^^^^^
+> 17 |   ShieldAlert,
+     | ^^^^^^^^^^^^^^
+> 18 |   Instagram
+     | ^^^^^^^^^^^
+> 19 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | // YouTube linkinden embed url çıkarıcı
+  22 | function getEmbedUrl(url: string | null) {
+
+The export Instagram was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-rsc] (ecmascript).
+Did you mean to import Star?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist. 
+[browser] ./app/page.tsx:6:1
+Error: Export Instagram doesn't exist in target module
+   4 | import { Card, CardContent } from '@/components/ui/card'
+   5 | import { SignOutButton } from '@/components/SignOutButton'
+>  6 | import { 
+     | ^^^^^^^^
+>  7 |   ArrowRight, 
+     | ^^^^^^^^^^^^^^
+>  8 |   Flame, 
+     | ^^^^^^^^^
+>  9 |   HeartPulse, 
+     | ^^^^^^^^^^^^^^
+> 10 |   ShieldCheck, 
+     | ^^^^^^^^^^^^^^^
+> 11 |   Video, 
+     | ^^^^^^^^^
+> 12 |   CalendarCheck, 
+     | ^^^^^^^^^^^^^^^^^
+> 13 |   MessageCircle, 
+     | ^^^^^^^^^^^^^^^^^
+> 14 |   ExternalLink, 
+     | ^^^^^^^^^^^^^^^^
+> 15 |   Newspaper,
+     | ^^^^^^^^^^^^
+> 16 |   LayoutDashboard,
+     | ^^^^^^^^^^^^^^^^^^
+> 17 |   ShieldAlert,
+     | ^^^^^^^^^^^^^^
+> 18 |   Instagram
+     | ^^^^^^^^^^^
+> 19 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | // YouTube linkinden embed url çıkarıcı
+  22 | function getEmbedUrl(url: string | null) {
+
+The export Instagram was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-rsc] (ecmascript).
+Did you mean to import Star?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist. 
+⨯ ./app/page.tsx:6:1
+Error: Export Instagram doesn't exist in target module
+  [90m 4 |[0m [36mimport[0m { [33mCard[0m, [33mCardContent[0m } [36mfrom[0m [32m'@/components/ui/card'[0m
+  [90m 5 |[0m [36mimport[0m { [33mSignOutButton[0m } [36mfrom[0m [32m'@/components/SignOutButton'[0m
+[31m[1m>[0m [90m 6 |[0m [36mimport[0m { 
+  [90m   |[0m [31m[1m^^^^^^^^[0m
+[31m[1m>[0m [90m 7 |[0m   [33mArrowRight[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 8 |[0m   [33mFlame[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^^[0m
+[31m[1m>[0m [90m 9 |[0m   [33mHeartPulse[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m10 |[0m   [33mShieldCheck[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m11 |[0m   [33mVideo[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^^[0m
+[31m[1m>[0m [90m12 |[0m   [33mCalendarCheck[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m13 |[0m   [33mMessageCircle[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m14 |[0m   [33mExternalLink[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m15 |[0m   [33mNewspaper[0m,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m16 |[0m   [33mLayoutDashboard[0m,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m17 |[0m   [33mShieldAlert[0m,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m18 |[0m   [33mInstagram[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^[0m
+[31m[1m>[0m [90m19 |[0m } [36mfrom[0m [32m'lucide-react'[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m20 |[0m
+  [90m21 |[0m [90m// YouTube linkinden embed url çıkarıcı[0m
+  [90m22 |[0m [36mfunction[0m getEmbedUrl(url: string | [36mnull[0m) {
+
+The export Instagram was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-rsc] (ecmascript).
+Did you mean to import Star?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+
+ GET / 500 in 28ms (next.js: 18ms, application-code: 11ms)
+[browser] ./app/page.tsx:6:1
+Error: Export Instagram doesn't exist in target module
+   4 | import { Card, CardContent } from '@/components/ui/card'
+   5 | import { SignOutButton } from '@/components/SignOutButton'
+>  6 | import { 
+     | ^^^^^^^^
+>  7 |   ArrowRight, 
+     | ^^^^^^^^^^^^^^
+>  8 |   Flame, 
+     | ^^^^^^^^^
+>  9 |   HeartPulse, 
+     | ^^^^^^^^^^^^^^
+> 10 |   ShieldCheck, 
+     | ^^^^^^^^^^^^^^^
+> 11 |   Video, 
+     | ^^^^^^^^^
+> 12 |   CalendarCheck, 
+     | ^^^^^^^^^^^^^^^^^
+> 13 |   MessageCircle, 
+     | ^^^^^^^^^^^^^^^^^
+> 14 |   ExternalLink, 
+     | ^^^^^^^^^^^^^^^^
+> 15 |   Newspaper,
+     | ^^^^^^^^^^^^
+> 16 |   LayoutDashboard,
+     | ^^^^^^^^^^^^^^^^^^
+> 17 |   ShieldAlert,
+     | ^^^^^^^^^^^^^^
+> 18 |   Instagram
+     | ^^^^^^^^^^^
+> 19 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | // YouTube linkinden embed url çıkarıcı
+  22 | function getEmbedUrl(url: string | null) {
+
+The export Instagram was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-rsc] (ecmascript).
+Did you mean to import Star?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist. 
+[browser] Uncaught Error: ./app/page.tsx:6:1
+Error: Export Instagram doesn't exist in target module
+   4 | import { Card, CardContent } from '@/components/ui/card'
+   5 | import { SignOutButton } from '@/components/SignOutButton'
+>  6 | import { 
+     | ^^^^^^^^
+>  7 |   ArrowRight, 
+     | ^^^^^^^^^^^^^^
+>  8 |   Flame, 
+     | ^^^^^^^^^
+>  9 |   HeartPulse, 
+     | ^^^^^^^^^^^^^^
+> 10 |   ShieldCheck, 
+     | ^^^^^^^^^^^^^^^
+> 11 |   Video, 
+     | ^^^^^^^^^
+> 12 |   CalendarCheck, 
+     | ^^^^^^^^^^^^^^^^^
+> 13 |   MessageCircle, 
+     | ^^^^^^^^^^^^^^^^^
+> 14 |   ExternalLink, 
+     | ^^^^^^^^^^^^^^^^
+> 15 |   Newspaper,
+     | ^^^^^^^^^^^^
+> 16 |   LayoutDashboard,
+     | ^^^^^^^^^^^^^^^^^^
+> 17 |   ShieldAlert,
+     | ^^^^^^^^^^^^^^
+> 18 |   Instagram
+     | ^^^^^^^^^^^
+> 19 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | // YouTube linkinden embed url çıkarıcı
+  22 | function getEmbedUrl(url: string | null) {
+
+The export Instagram was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-rsc] (ecmascript).
+Did you mean to import Star?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+
+    at <unknown> (Error: ./app/page.tsx:6:1)
+    at <unknown> (Error: (./app/page.tsx:6:1)
+[browser] ./app/page.tsx:6:1
+Error: Export Instagram doesn't exist in target module
+   4 | import { Card, CardContent } from '@/components/ui/card'
+   5 | import { SignOutButton } from '@/components/SignOutButton'
+>  6 | import { 
+     | ^^^^^^^^
+>  7 |   ArrowRight, 
+     | ^^^^^^^^^^^^^^
+>  8 |   Flame, 
+     | ^^^^^^^^^
+>  9 |   HeartPulse, 
+     | ^^^^^^^^^^^^^^
+> 10 |   ShieldCheck, 
+     | ^^^^^^^^^^^^^^^
+> 11 |   Video, 
+     | ^^^^^^^^^
+> 12 |   CalendarCheck, 
+     | ^^^^^^^^^^^^^^^^^
+> 13 |   MessageCircle, 
+     | ^^^^^^^^^^^^^^^^^
+> 14 |   ExternalLink, 
+     | ^^^^^^^^^^^^^^^^
+> 15 |   Newspaper,
+     | ^^^^^^^^^^^^
+> 16 |   LayoutDashboard,
+     | ^^^^^^^^^^^^^^^^^^
+> 17 |   ShieldAlert,
+     | ^^^^^^^^^^^^^^
+> 18 |   Instagram
+     | ^^^^^^^^^^^
+> 19 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | // YouTube linkinden embed url çıkarıcı
+  22 | function getEmbedUrl(url: string | null) {
+
+The export Instagram was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-rsc] (ecmascript).
+Did you mean to import Star?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist. 
+[browser] ./app/page.tsx:6:1
+Error: Export Instagram doesn't exist in target module
+   4 | import { Card, CardContent } from '@/components/ui/card'
+   5 | import { SignOutButton } from '@/components/SignOutButton'
+>  6 | import { 
+     | ^^^^^^^^
+>  7 |   ArrowRight, 
+     | ^^^^^^^^^^^^^^
+>  8 |   Flame, 
+     | ^^^^^^^^^
+>  9 |   HeartPulse, 
+     | ^^^^^^^^^^^^^^
+> 10 |   ShieldCheck, 
+     | ^^^^^^^^^^^^^^^
+> 11 |   Video, 
+     | ^^^^^^^^^
+> 12 |   CalendarCheck, 
+     | ^^^^^^^^^^^^^^^^^
+> 13 |   MessageCircle, 
+     | ^^^^^^^^^^^^^^^^^
+> 14 |   ExternalLink, 
+     | ^^^^^^^^^^^^^^^^
+> 15 |   Newspaper,
+     | ^^^^^^^^^^^^
+> 16 |   LayoutDashboard,
+     | ^^^^^^^^^^^^^^^^^^
+> 17 |   ShieldAlert,
+     | ^^^^^^^^^^^^^^
+> 18 |   Instagram
+     | ^^^^^^^^^^^
+> 19 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | // YouTube linkinden embed url çıkarıcı
+  22 | function getEmbedUrl(url: string | null) {
+
+The export Instagram was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-rsc] (ecmascript).
+Did you mean to import Star?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist. 
+[browser] ./app/page.tsx:6:1
+Error: Export Instagram doesn't exist in target module
+   4 | import { Card, CardContent } from '@/components/ui/card'
+   5 | import { SignOutButton } from '@/components/SignOutButton'
+>  6 | import { 
+     | ^^^^^^^^
+>  7 |   ArrowRight, 
+     | ^^^^^^^^^^^^^^
+>  8 |   Flame, 
+     | ^^^^^^^^^
+>  9 |   HeartPulse, 
+     | ^^^^^^^^^^^^^^
+> 10 |   ShieldCheck, 
+     | ^^^^^^^^^^^^^^^
+> 11 |   Video, 
+     | ^^^^^^^^^
+> 12 |   CalendarCheck, 
+     | ^^^^^^^^^^^^^^^^^
+> 13 |   MessageCircle, 
+     | ^^^^^^^^^^^^^^^^^
+> 14 |   ExternalLink, 
+     | ^^^^^^^^^^^^^^^^
+> 15 |   Newspaper,
+     | ^^^^^^^^^^^^
+> 16 |   LayoutDashboard,
+     | ^^^^^^^^^^^^^^^^^^
+> 17 |   ShieldAlert,
+     | ^^^^^^^^^^^^^^
+> 18 |   Instagram
+     | ^^^^^^^^^^^
+> 19 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | // YouTube linkinden embed url çıkarıcı
+  22 | function getEmbedUrl(url: string | null) {
+
+The export Instagram was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-rsc] (ecmascript).
+Did you mean to import Star?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist. 
+ GET /basvuru 200 in 77ms (next.js: 30ms, application-code: 47ms)
+ GET /dashboard 200 in 1069ms (next.js: 24ms, proxy.ts: 999ms, application-code: 46ms)
+ GET / 200 in 1967ms (next.js: 9ms, application-code: 1958ms)
+ GET /admin 200 in 889ms (next.js: 5ms, proxy.ts: 860ms, application-code: 24ms)
+ GET / 200 in 2.3s (next.js: 3ms, application-code: 2.2s)
+ GET /admin 200 in 1245ms (next.js: 9ms, proxy.ts: 1218ms, application-code: 18ms)
+✓ Compiled in 122ms
+ GET /basvuru 200 in 49ms (next.js: 16ms, application-code: 33ms)
+ GET /dashboard 200 in 1294ms (next.js: 7ms, proxy.ts: 1244ms, application-code: 42ms)
+ GET /admin 200 in 1767ms (next.js: 9ms, proxy.ts: 1741ms, application-code: 18ms)
+ GET /admin 200 in 1346ms (next.js: 3ms, proxy.ts: 1273ms, application-code: 69ms)
+ GET / 200 in 8.2s (next.js: 4ms, application-code: 8.2s)
+ GET / 200 in 507ms (next.js: 2ms, application-code: 505ms)
+ GET /login 200 in 29ms (next.js: 6ms, proxy.ts: 4ms, application-code: 19ms)
+ GET /dashboard 200 in 3.1s (next.js: 4ms, proxy.ts: 907ms, application-code: 2.2s)
+ GET /dashboard 200 in 3.7s (next.js: 6ms, proxy.ts: 987ms, application-code: 2.7s)
+ GET / 200 in 1893ms (next.js: 3ms, application-code: 1890ms)
+ GET /dashboard 200 in 3.3s (next.js: 5ms, proxy.ts: 1091ms, application-code: 2.2s)
+ GET / 200 in 1264ms (next.js: 3ms, application-code: 1261ms)
+ GET /basvuru 200 in 25ms (next.js: 4ms, application-code: 21ms)
