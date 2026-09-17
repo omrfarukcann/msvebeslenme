@@ -4236,3 +4236,285 @@ All exports of the module are statically known (It doesn't have dynamic exports)
  GET /dashboard 200 in 3.3s (next.js: 5ms, proxy.ts: 1091ms, application-code: 2.2s)
  GET / 200 in 1264ms (next.js: 3ms, application-code: 1261ms)
  GET /basvuru 200 in 25ms (next.js: 4ms, application-code: 21ms)
+✓ Compiled in 60ms
+ GET /basvuru 200 in 62ms (next.js: 4ms, application-code: 58ms)
+ GET /basvuru 200 in 49ms (next.js: 6ms, application-code: 42ms)
+⨯ Error: Event handlers cannot be passed to Client Component props.
+  <div className=... title=... onContextMenu={function onContextMenu}>
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at ignore-listed frames {
+  digest: '2503265137'
+}
+⨯ Error: Event handlers cannot be passed to Client Component props.
+  <div className=... title=... onContextMenu={function onContextMenu}>
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at ignore-listed frames {
+  digest: '2503265137'
+}
+ GET /dashboard 200 in 1431ms (next.js: 12ms, proxy.ts: 1358ms, application-code: 61ms)
+[browser] Uncaught Error: Event handlers cannot be passed to Client Component props.
+  <div className=... title=... onContextMenu={function onContextMenu}>
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+ GET / 200 in 2.6s (next.js: 3ms, application-code: 2.5s)
+⨯ Error: Event handlers cannot be passed to Client Component props.
+  <div className=... title=... onContextMenu={function onContextMenu}>
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at ignore-listed frames {
+  digest: '2503265137'
+}
+⨯ Error: Event handlers cannot be passed to Client Component props.
+  <div className=... title=... onContextMenu={function onContextMenu}>
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at ignore-listed frames {
+  digest: '2503265137'
+}
+ GET /dashboard 200 in 3.8s (next.js: 3ms, proxy.ts: 751ms, application-code: 3.1s)
+[browser] Uncaught Error: Event handlers cannot be passed to Client Component props.
+  <div className=... title=... onContextMenu={function onContextMenu}>
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+ GET /basvuru 200 in 31ms (next.js: 4ms, application-code: 27ms)
+ GET /dashboard 200 in 3.7s (next.js: 6ms, proxy.ts: 1021ms, application-code: 2.7s)
+ GET /dashboard 200 in 2.3s (next.js: 9ms, proxy.ts: 801ms, application-code: 1465ms)
+[browser] ./app/page.tsx:6:1
+Error: Export Instagram doesn't exist in target module
+   4 | import { Card, CardContent } from '@/components/ui/card'
+   5 | import { SignOutButton } from '@/components/SignOutButton'
+>  6 | import { 
+     | ^^^^^^^^
+>  7 |   ArrowRight, 
+     | ^^^^^^^^^^^^^^
+>  8 |   Flame, 
+     | ^^^^^^^^^
+>  9 |   HeartPulse, 
+     | ^^^^^^^^^^^^^^
+> 10 |   ShieldCheck, 
+     | ^^^^^^^^^^^^^^^
+> 11 |   Video, 
+     | ^^^^^^^^^
+> 12 |   CalendarCheck, 
+     | ^^^^^^^^^^^^^^^^^
+> 13 |   MessageCircle, 
+     | ^^^^^^^^^^^^^^^^^
+> 14 |   ExternalLink, 
+     | ^^^^^^^^^^^^^^^^
+> 15 |   Newspaper,
+     | ^^^^^^^^^^^^
+> 16 |   LayoutDashboard,
+     | ^^^^^^^^^^^^^^^^^^
+> 17 |   ShieldAlert,
+     | ^^^^^^^^^^^^^^
+> 18 |   Instagram
+     | ^^^^^^^^^^^
+> 19 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | // YouTube linkinden embed url çıkarıcı
+  22 | function getEmbedUrl(url: string | null) {
+
+The export Instagram was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-rsc] (ecmascript).
+Did you mean to import Star?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist. 
+[browser] ./app/page.tsx:6:1
+Error: Export Instagram doesn't exist in target module
+   4 | import { Card, CardContent } from '@/components/ui/card'
+   5 | import { SignOutButton } from '@/components/SignOutButton'
+>  6 | import { 
+     | ^^^^^^^^
+>  7 |   ArrowRight, 
+     | ^^^^^^^^^^^^^^
+>  8 |   Flame, 
+     | ^^^^^^^^^
+>  9 |   HeartPulse, 
+     | ^^^^^^^^^^^^^^
+> 10 |   ShieldCheck, 
+     | ^^^^^^^^^^^^^^^
+> 11 |   Video, 
+     | ^^^^^^^^^
+> 12 |   CalendarCheck, 
+     | ^^^^^^^^^^^^^^^^^
+> 13 |   MessageCircle, 
+     | ^^^^^^^^^^^^^^^^^
+> 14 |   ExternalLink, 
+     | ^^^^^^^^^^^^^^^^
+> 15 |   Newspaper,
+     | ^^^^^^^^^^^^
+> 16 |   LayoutDashboard,
+     | ^^^^^^^^^^^^^^^^^^
+> 17 |   ShieldAlert,
+     | ^^^^^^^^^^^^^^
+> 18 |   Instagram
+     | ^^^^^^^^^^^
+> 19 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | // YouTube linkinden embed url çıkarıcı
+  22 | function getEmbedUrl(url: string | null) {
+
+The export Instagram was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-rsc] (ecmascript).
+Did you mean to import Star?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist. 
+[browser] ./app/page.tsx:6:1
+Error: Export Instagram doesn't exist in target module
+   4 | import { Card, CardContent } from '@/components/ui/card'
+   5 | import { SignOutButton } from '@/components/SignOutButton'
+>  6 | import { 
+     | ^^^^^^^^
+>  7 |   ArrowRight, 
+     | ^^^^^^^^^^^^^^
+>  8 |   Flame, 
+     | ^^^^^^^^^
+>  9 |   HeartPulse, 
+     | ^^^^^^^^^^^^^^
+> 10 |   ShieldCheck, 
+     | ^^^^^^^^^^^^^^^
+> 11 |   Video, 
+     | ^^^^^^^^^
+> 12 |   CalendarCheck, 
+     | ^^^^^^^^^^^^^^^^^
+> 13 |   MessageCircle, 
+     | ^^^^^^^^^^^^^^^^^
+> 14 |   ExternalLink, 
+     | ^^^^^^^^^^^^^^^^
+> 15 |   Newspaper,
+     | ^^^^^^^^^^^^
+> 16 |   LayoutDashboard,
+     | ^^^^^^^^^^^^^^^^^^
+> 17 |   ShieldAlert,
+     | ^^^^^^^^^^^^^^
+> 18 |   Instagram
+     | ^^^^^^^^^^^
+> 19 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | // YouTube linkinden embed url çıkarıcı
+  22 | function getEmbedUrl(url: string | null) {
+
+The export Instagram was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-rsc] (ecmascript).
+Did you mean to import Star?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist. 
+[browser] ./app/page.tsx:6:1
+Error: Export Instagram doesn't exist in target module
+   4 | import { Card, CardContent } from '@/components/ui/card'
+   5 | import { SignOutButton } from '@/components/SignOutButton'
+>  6 | import { 
+     | ^^^^^^^^
+>  7 |   ArrowRight, 
+     | ^^^^^^^^^^^^^^
+>  8 |   Flame, 
+     | ^^^^^^^^^
+>  9 |   HeartPulse, 
+     | ^^^^^^^^^^^^^^
+> 10 |   ShieldCheck, 
+     | ^^^^^^^^^^^^^^^
+> 11 |   Video, 
+     | ^^^^^^^^^
+> 12 |   CalendarCheck, 
+     | ^^^^^^^^^^^^^^^^^
+> 13 |   MessageCircle, 
+     | ^^^^^^^^^^^^^^^^^
+> 14 |   ExternalLink, 
+     | ^^^^^^^^^^^^^^^^
+> 15 |   Newspaper,
+     | ^^^^^^^^^^^^
+> 16 |   LayoutDashboard,
+     | ^^^^^^^^^^^^^^^^^^
+> 17 |   ShieldAlert,
+     | ^^^^^^^^^^^^^^
+> 18 |   Instagram
+     | ^^^^^^^^^^^
+> 19 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | // YouTube linkinden embed url çıkarıcı
+  22 | function getEmbedUrl(url: string | null) {
+
+The export Instagram was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-rsc] (ecmascript).
+Did you mean to import Star?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist. 
+[browser] ./app/page.tsx:6:1
+Error: Export Instagram doesn't exist in target module
+   4 | import { Card, CardContent } from '@/components/ui/card'
+   5 | import { SignOutButton } from '@/components/SignOutButton'
+>  6 | import { 
+     | ^^^^^^^^
+>  7 |   ArrowRight, 
+     | ^^^^^^^^^^^^^^
+>  8 |   Flame, 
+     | ^^^^^^^^^
+>  9 |   HeartPulse, 
+     | ^^^^^^^^^^^^^^
+> 10 |   ShieldCheck, 
+     | ^^^^^^^^^^^^^^^
+> 11 |   Video, 
+     | ^^^^^^^^^
+> 12 |   CalendarCheck, 
+     | ^^^^^^^^^^^^^^^^^
+> 13 |   MessageCircle, 
+     | ^^^^^^^^^^^^^^^^^
+> 14 |   ExternalLink, 
+     | ^^^^^^^^^^^^^^^^
+> 15 |   Newspaper,
+     | ^^^^^^^^^^^^
+> 16 |   LayoutDashboard,
+     | ^^^^^^^^^^^^^^^^^^
+> 17 |   ShieldAlert,
+     | ^^^^^^^^^^^^^^
+> 18 |   Instagram
+     | ^^^^^^^^^^^
+> 19 | } from 'lucide-react'
+     | ^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | // YouTube linkinden embed url çıkarıcı
+  22 | function getEmbedUrl(url: string | null) {
+
+The export Instagram was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-rsc] (ecmascript).
+Did you mean to import Star?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist. 
+ GET / 200 in 1224ms (next.js: 6ms, application-code: 1218ms)
+ GET /basvuru 200 in 31ms (next.js: 4ms, application-code: 27ms)
+ GET /basvuru 200 in 149ms (next.js: 4ms, application-code: 145ms)
+ GET / 200 in 1355ms (next.js: 4ms, application-code: 1351ms)
+ GET /login 200 in 46ms (next.js: 6ms, proxy.ts: 8ms, application-code: 32ms)
+ GET /dashboard 200 in 4.0s (next.js: 6ms, proxy.ts: 704ms, application-code: 3.3s)
+ GET /dashboard 200 in 3.9s (next.js: 6ms, proxy.ts: 1132ms, application-code: 2.8s)
+ GET / 200 in 1891ms (next.js: 4ms, application-code: 1887ms)
+ GET /dashboard 200 in 2.4s (next.js: 7ms, proxy.ts: 454ms, application-code: 1962ms)
+ GET / 200 in 1458ms (next.js: 5ms, application-code: 1454ms)
+ GET /basvuru 200 in 25ms (next.js: 4ms, application-code: 21ms)
+ GET / 200 in 1307ms (next.js: 4ms, application-code: 1303ms)
+ GET / 200 in 538ms (next.js: 9ms, application-code: 529ms)
+ GET /login 200 in 45ms (next.js: 7ms, proxy.ts: 8ms, application-code: 30ms)
+ GET /admin 200 in 986ms (next.js: 10ms, proxy.ts: 947ms, application-code: 29ms)
+ GET /admin 200 in 958ms (next.js: 7ms, proxy.ts: 916ms, application-code: 35ms)
+ GET / 200 in 693ms (next.js: 4ms, application-code: 689ms)
+ GET /login 200 in 41ms (next.js: 4ms, proxy.ts: 8ms, application-code: 28ms)
+ GET /dashboard 200 in 1233ms (next.js: 6ms, proxy.ts: 440ms, application-code: 786ms)
+ GET /dashboard 200 in 1389ms (next.js: 6ms, proxy.ts: 425ms, application-code: 958ms)
+ GET / 200 in 755ms (next.js: 5ms, application-code: 750ms)
+ GET /login 200 in 37ms (next.js: 5ms, proxy.ts: 6ms, application-code: 26ms)
+ GET /admin 200 in 1064ms (next.js: 5ms, proxy.ts: 1033ms, application-code: 26ms)
+ GET /admin 200 in 1085ms (next.js: 7ms, proxy.ts: 1047ms, application-code: 32ms)
+ GET / 200 in 631ms (next.js: 3ms, application-code: 628ms)
+ GET /basvuru 200 in 29ms (next.js: 4ms, application-code: 25ms)
+ GET / 200 in 458ms (next.js: 4ms, application-code: 454ms)
+ GET /login 200 in 40ms (next.js: 5ms, proxy.ts: 6ms, application-code: 29ms)
+ GET /register 200 in 39ms (next.js: 6ms, proxy.ts: 6ms, application-code: 27ms)
+ GET /api/auth/callback?code=bc5fadc3-1a3f-4542-a1d7-7bae21a512a0 307 in 464ms (next.js: 4ms, application-code: 461ms)
+ GET /dashboard 200 in 1236ms (next.js: 5ms, proxy.ts: 342ms, application-code: 889ms)
+ GET / 200 in 730ms (next.js: 4ms, application-code: 726ms)
+ GET /login 200 in 46ms (next.js: 6ms, proxy.ts: 8ms, application-code: 33ms)
+ GET /admin 200 in 1244ms (next.js: 5ms, proxy.ts: 1206ms, application-code: 33ms)
+ GET /admin 200 in 902ms (next.js: 7ms, proxy.ts: 857ms, application-code: 37ms)
+ GET / 200 in 886ms (next.js: 4ms, application-code: 882ms)
+ GET /login 200 in 51ms (next.js: 5ms, proxy.ts: 9ms, application-code: 36ms)
+ GET /dashboard 200 in 2.6s (next.js: 6ms, proxy.ts: 797ms, application-code: 1776ms)
+ GET /dashboard 200 in 2.1s (next.js: 5ms, proxy.ts: 503ms, application-code: 1632ms)
+ GET / 200 in 1883ms (next.js: 4ms, application-code: 1878ms)
+ GET /dashboard 200 in 2.4s (next.js: 6ms, proxy.ts: 509ms, application-code: 1859ms)
+ GET / 200 in 2.8s (next.js: 3ms, application-code: 2.8s)

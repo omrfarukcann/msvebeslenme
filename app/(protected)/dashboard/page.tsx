@@ -2,13 +2,28 @@ import { createClient } from '@/lib/supabase/server'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { SignOutButton } from '@/components/SignOutButton'
-import { Clock, PlayCircle, Home, Sparkles, Video, Calendar } from 'lucide-react'
+import { Clock, PlayCircle, Home, Sparkles, Video as VideoIcon, Calendar } from 'lucide-react'
 import Link from 'next/link'
 
+// Akıllı ve Korumalı Embed URL Çıkarıcı
 function getEmbedUrl(url: string) {
-  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/
-  const match = url.match(regExp)
-  return match && match[2].length === 11 ? `https://www.youtube.com/embed/${match[2]}` : null
+  if (!url) return null
+
+  // 1. YouTube Linki
+  const ytMatch = url.match(/^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/)
+  if (ytMatch && ytMatch[2].length === 11) {
+    return `https://www.youtube.com/embed/${ytMatch[2]}?modestbranding=1&rel=0&iv_load_policy=3`
+  }
+
+  // 2. Google Drive Linki
+  if (url.includes('drive.google.com')) {
+    const driveMatch = url.match(/\/d\/([a-zA-Z0-9_-]+)/)
+    if (driveMatch && driveMatch[1]) {
+      return `https://drive.google.com/file/d/${driveMatch[1]}/preview`
+    }
+  }
+
+  return url
 }
 
 export default async function DashboardPage() {
@@ -57,7 +72,7 @@ export default async function DashboardPage() {
 
   return (
     <div className="min-h-screen bg-stone-50/70 pb-20">
-      {/* Üst Header */}
+      {/* Header */}
       <header className="bg-white border-b border-orange-100 py-6 px-6 md:px-12 mb-8 shadow-xs">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
@@ -105,7 +120,7 @@ export default async function DashboardPage() {
               </div>
               <a href={activeMeeting.meeting_url} target="_blank" rel="noopener noreferrer" className="shrink-0 w-full md:w-auto">
                 <Button size="lg" className="w-full md:w-auto bg-white text-orange-950 hover:bg-orange-50 font-bold px-8 py-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
-                  <Video className="w-5 h-5 mr-2 text-orange-600" /> Toplantıya Katıl
+                  <VideoIcon className="w-5 h-5 mr-2 text-orange-600" /> Toplantıya Katıl
                 </Button>
               </a>
             </div>
@@ -122,7 +137,7 @@ export default async function DashboardPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {videos.map((vid, idx) => (
                 <Card key={vid.id} className="overflow-hidden border-stone-200/80 shadow-xs hover:shadow-md transition-shadow bg-white flex flex-col">
-                  <div className="aspect-video w-full bg-stone-900 relative">
+                  <div className="aspect-video w-full bg-stone-950 relative group">
                     <iframe
                       src={getEmbedUrl(vid.youtube_url) || ''}
                       className="w-full h-full"
@@ -130,7 +145,13 @@ export default async function DashboardPage() {
                       allowFullScreen
                       title={vid.title}
                     />
+                    {/* Üst Şeffaf Güvenlik Şeridi (onContextMenu hatasından arındırıldı) */}
+                    <div 
+                      className="absolute top-0 left-0 right-0 h-14 bg-transparent z-10 pointer-events-auto select-none"
+                      title="msvebeslenme Özel İçeriği"
+                    />
                   </div>
+
                   <CardContent className="p-6 flex-1 flex flex-col justify-between">
                     <div>
                       <div className="flex items-center gap-2 mb-2 text-orange-600 text-xs font-bold">
