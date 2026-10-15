@@ -7,8 +7,6 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
-import { Checkbox } from '@/components/ui/checkbox'
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { Label } from '@/components/ui/label'
 import { CheckCircle2, ArrowLeft, HeartHandshake } from 'lucide-react'
 
@@ -37,6 +35,7 @@ export default function BasvuruPage() {
   const [selectedSymptoms, setSelectedSymptoms] = useState<string[]>([])
   const [otherSymptom, setOtherSymptom] = useState('')
 
+  // Radio seçenekleri states
   const [maritalStatus, setMaritalStatus] = useState('Evli')
   const [hasChild, setHasChild] = useState('Yok')
   const [otherDiseaseOption, setOtherDiseaseOption] = useState('Yok')
@@ -118,7 +117,7 @@ export default function BasvuruPage() {
             <p className="text-stone-600 text-sm mb-6 leading-relaxed">
               Formunuz Diyetisyen Sümeyye Can'a iletilmiştir. Bilgileriniz incelendikten sonra en kısa sürede WhatsApp üzerinden iletişime geçilecektir.
             </p>
-            <Button onClick={() => window.location.href = '/'} className="w-full bg-orange-600 hover:bg-orange-700 text-white font-medium">
+            <Button onClick={() => window.location.href = '/'} className="w-full bg-orange-600 hover:bg-orange-700 text-white font-medium cursor-pointer">
               Ana Sayfaya Dön
             </Button>
           </CardContent>
@@ -129,7 +128,6 @@ export default function BasvuruPage() {
 
   return (
     <div className="min-h-screen py-10 px-4 md:px-8 bg-stone-50 flex flex-col items-center">
-      {/* Üst Navigasyon Butonu */}
       <div className="max-w-3xl w-full mb-4 flex justify-between items-center">
         <Link href="/" className="inline-flex items-center text-sm font-semibold text-orange-800 hover:text-orange-950 transition-colors">
           <ArrowLeft className="w-4 h-4 mr-1.5" /> Ana Sayfaya Dön
@@ -138,7 +136,6 @@ export default function BasvuruPage() {
       </div>
 
       <Card className="max-w-3xl w-full border-orange-200/80 shadow-sm bg-white overflow-hidden">
-        {/* Soft, Yüksek Kontrastlı Karşılama Kartı */}
         <div className="bg-orange-100/60 border-b border-orange-200/60 p-6 md:p-10">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-200/60 text-orange-900 text-xs font-semibold mb-3">
             <HeartHandshake className="w-3.5 h-3.5" /> Diyetisyen Sümeyye Can
@@ -158,116 +155,131 @@ export default function BasvuruPage() {
           </div>
         </div>
 
-        {/* Form Soruları */}
         <CardContent className="p-6 md:p-10">
           <form onSubmit={handleSubmit} className="space-y-8">
             <div className="space-y-2">
               <Label className="text-sm font-semibold text-stone-900">Ad Soyad *</Label>
-              <Input name="fullname" required placeholder="Adınız Soyadınız" className="focus-visible:ring-orange-500" />
+              <Input name="fullname" required placeholder="Adınız Soyadınız" />
             </div>
 
             <div className="space-y-2">
               <Label className="text-sm font-semibold text-stone-900">
                 Telefon numarası <span className="font-normal text-xs text-stone-500">(Doğru yazdığınızdan emin olun)</span> *
               </Label>
-              <Input name="phone" type="tel" required placeholder="05XXXXXXXXX" className="focus-visible:ring-orange-500" />
+              <Input name="phone" type="tel" required placeholder="05XXXXXXXXX" />
             </div>
 
             <div className="space-y-2">
               <Label className="text-sm font-semibold text-stone-900">E-posta Adresi (İsteğe bağlı)</Label>
-              <Input name="email" type="email" placeholder="ornek@mail.com" className="focus-visible:ring-orange-500" />
+              <Input name="email" type="email" placeholder="ornek@mail.com" />
             </div>
 
             <div className="space-y-2">
               <Label className="text-sm font-semibold text-stone-900">Yaş *</Label>
-              <Input name="age" required placeholder="Yaşınız" className="focus-visible:ring-orange-500" />
+              <Input name="age" required placeholder="Yaşınız" />
             </div>
 
             <div className="space-y-2">
               <Label className="text-sm font-semibold text-stone-900">Meslek *</Label>
-              <Input name="job" required placeholder="Mesleğiniz" className="focus-visible:ring-orange-500" />
+              <Input name="job" required placeholder="Mesleğiniz" />
             </div>
 
-            <div className="space-y-3">
-              <Label className="text-sm font-semibold text-stone-900">Medeni durum *</Label>
-              <RadioGroup value={maritalStatus} onValueChange={setMaritalStatus} className="space-y-2">
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Evli" id="mar-evli" />
-                  <Label htmlFor="mar-evli" className="font-normal cursor-pointer text-stone-800">Evli</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Bekar" id="mar-bekar" />
-                  <Label htmlFor="mar-bekar" className="font-normal cursor-pointer text-stone-800">Bekar</Label>
-                </div>
-              </RadioGroup>
+            {/* 5. Medeni Durum (Yerel Radio ile Kusursuz Çalışır) */}
+            <div className="space-y-2.5">
+              <Label className="text-sm font-semibold text-stone-900 block">Medeni durum *</Label>
+              <div className="space-y-2">
+                {['Evli', 'Bekar'].map((val) => (
+                  <label key={val} className="flex items-center space-x-2.5 cursor-pointer select-none">
+                    <input
+                      type="radio"
+                      name="maritalStatusRadio"
+                      value={val}
+                      checked={maritalStatus === val}
+                      onChange={() => setMaritalStatus(val)}
+                      className="w-4 h-4 text-orange-600 border-stone-300 focus:ring-orange-500 cursor-pointer accent-orange-600"
+                    />
+                    <span className="text-sm text-stone-800">{val}</span>
+                  </label>
+                ))}
+              </div>
             </div>
 
-            <div className="space-y-3">
-              <Label className="text-sm font-semibold text-stone-900">Çocuğunuz var mı? *</Label>
-              <RadioGroup value={hasChild} onValueChange={setHasChild} className="space-y-2">
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Var" id="child-var" />
-                  <Label htmlFor="child-var" className="font-normal cursor-pointer text-stone-800">Var</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Yok" id="child-yok" />
-                  <Label htmlFor="child-yok" className="font-normal cursor-pointer text-stone-800">Yok</Label>
-                </div>
-              </RadioGroup>
+            {/* 6. Çocuğunuz var mı? */}
+            <div className="space-y-2.5">
+              <Label className="text-sm font-semibold text-stone-900 block">Çocuğunuz var mı? *</Label>
+              <div className="space-y-2">
+                {['Var', 'Yok'].map((val) => (
+                  <label key={val} className="flex items-center space-x-2.5 cursor-pointer select-none">
+                    <input
+                      type="radio"
+                      name="hasChildRadio"
+                      value={val}
+                      checked={hasChild === val}
+                      onChange={() => setHasChild(val)}
+                      className="w-4 h-4 text-orange-600 border-stone-300 focus:ring-orange-500 cursor-pointer accent-orange-600"
+                    />
+                    <span className="text-sm text-stone-800">{val}</span>
+                  </label>
+                ))}
+              </div>
             </div>
 
             <div className="space-y-2">
               <Label className="text-sm font-semibold text-stone-900">
                 Ne zaman MS teşhisi aldınız ve biliyorsanız MS türünüz nedir? *
               </Label>
-              <Input name="diagnosis_and_type" required placeholder="Örn: 2021 yılında RRMS teşhisi aldım" className="focus-visible:ring-orange-500" />
+              <Input name="diagnosis_and_type" required placeholder="Örn: 2021 yılında RRMS teşhisi aldım" />
             </div>
 
-            <div className="space-y-3">
-              <Label className="text-sm font-semibold text-stone-900">
-                Tanısı konmuş başka hastalığınız var mı? *
+            {/* 8. Tanısı konmuş başka hastalık */}
+            <div className="space-y-2.5">
+              <Label className="text-sm font-semibold text-stone-900 block">
+                Tanısı konmuş başka hastalığınız var mı? <span className="font-normal text-xs text-stone-500">(Var ise "Diğer" seçeneğinde belirtiniz)</span> *
               </Label>
-              <RadioGroup value={otherDiseaseOption} onValueChange={setOtherDiseaseOption} className="space-y-2">
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Yok" id="dis-yok" />
-                  <Label htmlFor="dis-yok" className="font-normal cursor-pointer text-stone-800">Yok</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Var" id="dis-var" />
-                  <Label htmlFor="dis-var" className="font-normal cursor-pointer text-stone-800">Var</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Diğer" id="dis-diger" />
-                  <Label htmlFor="dis-diger" className="font-normal cursor-pointer text-stone-800">Diğer:</Label>
-                </div>
-              </RadioGroup>
+              <div className="space-y-2">
+                {['Yok', 'Var', 'Diğer'].map((val) => (
+                  <label key={val} className="flex items-center space-x-2.5 cursor-pointer select-none">
+                    <input
+                      type="radio"
+                      name="otherDiseaseRadio"
+                      value={val}
+                      checked={otherDiseaseOption === val}
+                      onChange={() => setOtherDiseaseOption(val)}
+                      className="w-4 h-4 text-orange-600 border-stone-300 focus:ring-orange-500 cursor-pointer accent-orange-600"
+                    />
+                    <span className="text-sm text-stone-800">{val === 'Diğer' ? 'Diğer:' : val}</span>
+                  </label>
+                ))}
+              </div>
               {otherDiseaseOption === 'Diğer' && (
                 <Input
                   value={otherDiseaseText}
                   onChange={(e) => setOtherDiseaseText(e.target.value)}
                   placeholder="Hastalığınızı belirtiniz"
-                  className="mt-2 focus-visible:ring-orange-500"
+                  className="mt-2"
                   required
                 />
               )}
             </div>
 
+            {/* 9. Semptomlar (Checkbox) */}
             <div className="space-y-3">
               <Label className="text-sm font-semibold text-stone-900">
                 Günlük hayatınızda sizi en çok zorlayan MS semptomları hangileri? *
               </Label>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5 pt-1">
                 {SYMPTOMS_LIST.map((sym, idx) => (
-                  <div key={idx} className="flex items-start space-x-2">
-                    <Checkbox
-                      id={`sym-${idx}`}
+                  <label key={idx} className="flex items-start space-x-2.5 cursor-pointer select-none p-1 hover:bg-stone-100/50 rounded-lg transition-colors">
+                    <input
+                      type="checkbox"
                       checked={selectedSymptoms.includes(sym)}
-                      onCheckedChange={() => toggleSymptom(sym)}
+                      onChange={() => toggleSymptom(sym)}
+                      className="w-4 h-4 mt-0.5 rounded border-stone-300 text-orange-600 focus:ring-orange-500 cursor-pointer accent-orange-600 shrink-0"
                     />
-                    <Label htmlFor={`sym-${idx}`} className="text-xs font-normal leading-tight cursor-pointer text-stone-800">
+                    <span className="text-xs font-normal text-stone-800 leading-snug">
                       {sym}
-                    </Label>
-                  </div>
+                    </span>
+                  </label>
                 ))}
               </div>
               <div className="pt-2">
@@ -276,68 +288,76 @@ export default function BasvuruPage() {
                   value={otherSymptom}
                   onChange={(e) => setOtherSymptom(e.target.value)}
                   placeholder="Varsa diğer belirtilerinizi yazınız"
-                  className="focus-visible:ring-orange-500"
                 />
               </div>
             </div>
 
-            <div className="space-y-3">
-              <Label className="text-sm font-semibold text-stone-900">
+            {/* 10. Bağımsız Hareket */}
+            <div className="space-y-2.5">
+              <Label className="text-sm font-semibold text-stone-900 block">
                 Günlük yaşamda bağımsız hareket edebiliyor musunuz? *
               </Label>
-              <RadioGroup value={mobilityOption} onValueChange={setMobilityOption} className="space-y-2">
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Hareketimde kısıtlanma yok, desteksiz yürüyebiliyorum" id="mob-1" />
-                  <Label htmlFor="mob-1" className="font-normal cursor-pointer text-xs text-stone-800">Hareketimde kısıtlanma yok, desteksiz yürüyebiliyorum</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Hareket kısıtlılığım var, desteğe ihtiyaç duyuyorum" id="mob-2" />
-                  <Label htmlFor="mob-2" className="font-normal cursor-pointer text-xs text-stone-800">Hareket kısıtlılığım var, desteğe ihtiyaç duyuyorum</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Diğer" id="mob-3" />
-                  <Label htmlFor="mob-3" className="font-normal cursor-pointer text-xs text-stone-800">Diğer:</Label>
-                </div>
-              </RadioGroup>
+              <div className="space-y-2">
+                {[
+                  'Hareketimde kısıtlanma yok, desteksiz yürüyebiliyorum',
+                  'Hareket kısıtlılığım var, desteğe ihtiyaç duyuyorum',
+                  'Diğer'
+                ].map((val) => (
+                  <label key={val} className="flex items-center space-x-2.5 cursor-pointer select-none">
+                    <input
+                      type="radio"
+                      name="mobilityRadio"
+                      value={val}
+                      checked={mobilityOption === val}
+                      onChange={() => setMobilityOption(val)}
+                      className="w-4 h-4 text-orange-600 border-stone-300 focus:ring-orange-500 cursor-pointer accent-orange-600"
+                    />
+                    <span className="text-xs text-stone-800">{val === 'Diğer' ? 'Diğer:' : val}</span>
+                  </label>
+                ))}
+              </div>
               {mobilityOption === 'Diğer' && (
                 <Input
                   value={otherMobilityText}
                   onChange={(e) => setOtherMobilityText(e.target.value)}
                   placeholder="Durumunuzu açıklayınız"
-                  className="mt-2 focus-visible:ring-orange-500"
+                  className="mt-2"
                   required
                 />
               )}
             </div>
 
-            <div className="space-y-3">
-              <Label className="text-sm font-semibold text-stone-900">
+            {/* 11. Kilo Hedefi */}
+            <div className="space-y-2.5">
+              <Label className="text-sm font-semibold text-stone-900 block">
                 Beden görüntünüz ve kilonuzla ilgili bir hedefiniz var mı? Varsa bunun önceliği ne? *
               </Label>
-              <RadioGroup value={weightGoalOption} onValueChange={setWeightGoalOption} className="space-y-2">
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Var. Kesinlikle belirli bir kiloya ulaşmak istiyorum, önceliğim bu." id="wg-1" />
-                  <Label htmlFor="wg-1" className="font-normal cursor-pointer text-xs text-stone-800">Var. Kesinlikle belirli bir kiloya ulaşmak istiyorum, önceliğim bu.</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Var ama önceliğim bu değil." id="wg-2" />
-                  <Label htmlFor="wg-2" className="font-normal cursor-pointer text-xs text-stone-800">Var ama önceliğim bu değil.</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Yok. Asıl amacım nasıl besleneceğimi öğrenip bir düzen oluşturmak." id="wg-3" />
-                  <Label htmlFor="wg-3" className="font-normal cursor-pointer text-xs text-stone-800">Yok. Asıl amacım nasıl besleneceğimi öğrenip bir düzen oluşturmak.</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Diğer" id="wg-4" />
-                  <Label htmlFor="wg-4" className="font-normal cursor-pointer text-xs text-stone-800">Diğer:</Label>
-                </div>
-              </RadioGroup>
+              <div className="space-y-2">
+                {[
+                  'Var. Kesinlikle belirli bir kiloya ulaşmak istiyorum, önceliğim bu.',
+                  'Var ama önceliğim bu değil.',
+                  'Yok. Asıl amacım nasıl besleneceğimi öğrenip bir düzen oluşturmak.',
+                  'Diğer'
+                ].map((val) => (
+                  <label key={val} className="flex items-center space-x-2.5 cursor-pointer select-none">
+                    <input
+                      type="radio"
+                      name="weightGoalRadio"
+                      value={val}
+                      checked={weightGoalOption === val}
+                      onChange={() => setWeightGoalOption(val)}
+                      className="w-4 h-4 text-orange-600 border-stone-300 focus:ring-orange-500 cursor-pointer accent-orange-600"
+                    />
+                    <span className="text-xs text-stone-800">{val === 'Diğer' ? 'Diğer:' : val}</span>
+                  </label>
+                ))}
+              </div>
               {weightGoalOption === 'Diğer' && (
                 <Input
                   value={otherWeightGoalText}
                   onChange={(e) => setOtherWeightGoalText(e.target.value)}
                   placeholder="Hedefinizi belirtiniz"
-                  className="mt-2 focus-visible:ring-orange-500"
+                  className="mt-2"
                   required
                 />
               )}
@@ -347,33 +367,39 @@ export default function BasvuruPage() {
               <Label className="text-sm font-semibold text-stone-900">
                 Şu anda bu formu dolduruyor olmanızın en büyük sebebi ve bu programdan beklentiniz nedir? *
               </Label>
-              <Textarea name="reason_and_expectation" required rows={3} placeholder="Düşüncelerinizi paylaşın..." className="focus-visible:ring-orange-500" />
+              <Textarea name="reason_and_expectation" required rows={3} placeholder="Düşüncelerinizi paylaşın..." />
             </div>
 
+            {/* 13. Grup Uygunluğu */}
             <div className="space-y-3 bg-stone-100/60 p-4 rounded-xl border border-stone-200">
               <Label className="text-xs font-semibold text-stone-900 leading-relaxed block">
                 MS'le Sağlıklı Yaşam; birebir diyet listeleri vermek yerine, haftalık grup toplantıları ve online eğitimlerle ilerleyen bir grup çalışmasıdır. Amacım size katı kurallar koymak değil, eğitimler eşliğinde kalıcı sağlıklı beslenme ve yaşam tarzı alışkanlıkları kazandırmaktır. Programa kaydolduğunuzda bu topluluktan ve eğitimlerden 6 ay boyunca faydalanabiliyorsunuz. Bu işleyiş sizin için uygun mu? *
               </Label>
-              <RadioGroup value={groupFitOption} onValueChange={setGroupFitOption} className="space-y-2 mt-2">
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Grup çalışması olması, eğitimler ve 6 aylık bu süreç bana uygun" id="gf-1" />
-                  <Label htmlFor="gf-1" className="font-normal cursor-pointer text-xs text-stone-800">Grup çalışması olması, eğitimler ve 6 aylık bu süreç bana uygun</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Eğitim/grup ortamı değil, sadece birebir özel diyetisyen takibi istiyorum" id="gf-2" />
-                  <Label htmlFor="gf-2" className="font-normal cursor-pointer text-xs text-stone-800">Eğitim/grup ortamı değil, sadece birebir özel diyetisyen takibi istiyorum</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Diğer" id="gf-3" />
-                  <Label htmlFor="gf-3" className="font-normal cursor-pointer text-xs text-stone-800">Diğer:</Label>
-                </div>
-              </RadioGroup>
+              <div className="space-y-2 mt-2">
+                {[
+                  'Grup çalışması olması, eğitimler ve 6 aylık bu süreç bana uygun',
+                  'Eğitim/grup ortamı değil, sadece birebir özel diyetisyen takibi istiyorum',
+                  'Diğer'
+                ].map((val) => (
+                  <label key={val} className="flex items-center space-x-2.5 cursor-pointer select-none">
+                    <input
+                      type="radio"
+                      name="groupFitRadio"
+                      value={val}
+                      checked={groupFitOption === val}
+                      onChange={() => setGroupFitOption(val)}
+                      className="w-4 h-4 text-orange-600 border-stone-300 focus:ring-orange-500 cursor-pointer accent-orange-600"
+                    />
+                    <span className="text-xs text-stone-800">{val === 'Diğer' ? 'Diğer:' : val}</span>
+                  </label>
+                ))}
+              </div>
               {groupFitOption === 'Diğer' && (
                 <Input
                   value={otherGroupFitText}
                   onChange={(e) => setOtherGroupFitText(e.target.value)}
                   placeholder="Düşüncenizi belirtiniz"
-                  className="mt-2 bg-white focus-visible:ring-orange-500"
+                  className="mt-2 bg-white"
                   required
                 />
               )}
@@ -383,66 +409,71 @@ export default function BasvuruPage() {
               <Label className="text-sm font-semibold text-stone-900">
                 Programa katılım ve sürece devamlılık konusundaki motivasyonunuza 10 üzerinden kaç puan verirsiniz? (0-10) *
               </Label>
-              <Input name="motivation_score" type="number" min={0} max={10} required placeholder="Örn: 9" className="focus-visible:ring-orange-500" />
+              <Input name="motivation_score" type="number" min={0} max={10} required placeholder="Örn: 9" />
             </div>
 
-            <div className="space-y-3">
-              <Label className="text-sm font-semibold text-stone-900">
+            {/* 15. Bütçe */}
+            <div className="space-y-2.5">
+              <Label className="text-sm font-semibold text-stone-900 block">
                 MS'le Sağlıklı Yaşam kapsamlı bir danışmanlık programıdır ve ücretlidir. Bu sürece katılım konusunda kendinizi nasıl hissediyorsunuz? *
               </Label>
-              <RadioGroup value={financialOption} onValueChange={setFinancialOption} className="space-y-2">
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Kendim ve sağlığım için bütçe ayırmaya hazırım." id="fin-1" />
-                  <Label htmlFor="fin-1" className="font-normal cursor-pointer text-xs text-stone-800">Kendim ve sağlığım için bütçe ayırmaya hazırım.</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Maddi olarak beni zorlayabilir ama destek alarak katılabilirim." id="fin-2" />
-                  <Label htmlFor="fin-2" className="font-normal cursor-pointer text-xs text-stone-800">Maddi olarak beni zorlayabilir ama destek alarak katılabilirim.</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Şu an böyle bir süreç için bütçe ayırabilecek durumda değilim." id="fin-3" />
-                  <Label htmlFor="fin-3" className="font-normal cursor-pointer text-xs text-stone-800">Şu an böyle bir süreç için bütçe ayırabilecek durumda değilim.</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Diğer" id="fin-4" />
-                  <Label htmlFor="fin-4" className="font-normal cursor-pointer text-xs text-stone-800">Diğer:</Label>
-                </div>
-              </RadioGroup>
+              <div className="space-y-2">
+                {[
+                  'Kendim ve sağlığım için bütçe ayırmaya hazırım.',
+                  'Maddi olarak beni zorlayabilir ama destek alarak katılabilirim.',
+                  'Şu an böyle bir süreç için bütçe ayırabilecek durumda değilim.',
+                  'Diğer'
+                ].map((val) => (
+                  <label key={val} className="flex items-center space-x-2.5 cursor-pointer select-none">
+                    <input
+                      type="radio"
+                      name="financialRadio"
+                      value={val}
+                      checked={financialOption === val}
+                      onChange={() => setFinancialOption(val)}
+                      className="w-4 h-4 text-orange-600 border-stone-300 focus:ring-orange-500 cursor-pointer accent-orange-600"
+                    />
+                    <span className="text-xs text-stone-800">{val === 'Diğer' ? 'Diğer:' : val}</span>
+                  </label>
+                ))}
+              </div>
               {financialOption === 'Diğer' && (
                 <Input
                   value={otherFinancialText}
                   onChange={(e) => setOtherFinancialText(e.target.value)}
                   placeholder="Durumunuzu belirtiniz"
-                  className="mt-2 focus-visible:ring-orange-500"
+                  className="mt-2"
                   required
                 />
               )}
             </div>
 
+            {/* Onay */}
             <div className="p-4 bg-orange-50/70 border border-orange-200/80 rounded-xl space-y-3">
               <p className="text-xs text-stone-800 leading-relaxed font-normal">
                 Formlara yoğunluk durumuna göre 1 hafta içinde sırasıyla WhatsApp üzerinden dönüş yapıyorum. Bu süreyi aşarsa bana Instagram üzerinden ulaşabilirsiniz. (Bazen telefon numaranızı yanlış yazmış oluyorsunuz veya formu göndermemiş oluyorsunuz.) *
               </p>
-              <div className="flex items-center space-x-2">
-                <Checkbox
-                  id="terms"
+              <label className="flex items-center space-x-2.5 cursor-pointer select-none">
+                <input
+                  type="checkbox"
                   checked={termsAccepted}
-                  onCheckedChange={(checked) => setTermsAccepted(!!checked)}
+                  onChange={(e) => setTermsAccepted(e.target.checked)}
+                  className="w-4 h-4 rounded border-stone-300 text-orange-600 focus:ring-orange-500 cursor-pointer accent-orange-600"
                 />
-                <Label htmlFor="terms" className="text-xs font-semibold text-stone-900 cursor-pointer">
+                <span className="text-xs font-semibold text-stone-900">
                   Bilgilendirmeyi okudum ve anladım.
-                </Label>
-              </div>
+                </span>
+              </label>
             </div>
 
             <div className="space-y-2">
               <Label className="text-sm font-semibold text-stone-900">
                 Eklemek istediğiniz bir şey varsa yazabilirsiniz
               </Label>
-              <Textarea name="notes" rows={2} placeholder="Eklemek istedikleriniz..." className="focus-visible:ring-orange-500" />
+              <Textarea name="notes" rows={2} placeholder="Eklemek istedikleriniz..." />
             </div>
 
-            <Button type="submit" disabled={loading} className="w-full bg-orange-600 hover:bg-orange-700 text-white py-6 text-base font-bold rounded-xl shadow-md">
+            <Button type="submit" disabled={loading} className="w-full bg-orange-600 hover:bg-orange-700 text-white py-6 text-base font-bold rounded-xl shadow-md cursor-pointer">
               {loading ? 'Gönderiliyor...' : 'Başvuruyu Gönder'}
             </Button>
           </form>
