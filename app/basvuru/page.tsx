@@ -8,7 +8,7 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
 import { Label } from '@/components/ui/label'
-import { CheckCircle2, ArrowLeft, HeartHandshake } from 'lucide-react'
+import { CheckCircle2, ArrowLeft, HeartHandshake, Shield, X } from 'lucide-react'
 
 const SYMPTOMS_LIST = [
   "Yorgunluk",
@@ -31,11 +31,11 @@ export default function BasvuruPage() {
   const supabase = createClient()
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [kvkkModalOpen, setKvkkModalOpen] = useState(false)
 
   const [selectedSymptoms, setSelectedSymptoms] = useState<string[]>([])
   const [otherSymptom, setOtherSymptom] = useState('')
 
-  // Radio seçenekleri states
   const [maritalStatus, setMaritalStatus] = useState('Evli')
   const [hasChild, setHasChild] = useState('Yok')
   const [otherDiseaseOption, setOtherDiseaseOption] = useState('Yok')
@@ -54,6 +54,7 @@ export default function BasvuruPage() {
   const [otherFinancialText, setOtherFinancialText] = useState('')
 
   const [termsAccepted, setTermsAccepted] = useState(false)
+  const [kvkkAccepted, setKvkkAccepted] = useState(false)
 
   function toggleSymptom(symptom: string) {
     setSelectedSymptoms(prev =>
@@ -69,18 +70,28 @@ export default function BasvuruPage() {
       return
     }
 
+    if (!kvkkAccepted) {
+      alert('Lütfen KVKK ve Sağlık Verileri Aydınlatma Metnini onaylayınız.')
+      return
+    }
+
     setLoading(true)
     const formData = new FormData(e.currentTarget)
 
+    const fullname = formData.get('fullname') as string
+    const phone = formData.get('phone') as string
+    const age = formData.get('age') as string
+    const motivation_score = formData.get('motivation_score') as string
+
     const payload = {
-      fullname: formData.get('fullname') as string,
-      phone: formData.get('phone') as string,
+      fullname,
+      phone,
       email: (formData.get('email') as string) || '',
       message: (formData.get('reason_and_expectation') as string) || 'Başvuru yapıldı.',
       details: {
-        fullname: formData.get('fullname'),
-        phone: formData.get('phone'),
-        age: formData.get('age'),
+        fullname,
+        phone,
+        age,
         job: formData.get('job'),
         marital_status: maritalStatus,
         has_child: hasChild,
@@ -91,7 +102,7 @@ export default function BasvuruPage() {
         weight_goal: weightGoalOption === 'Diğer' ? otherWeightGoalText : weightGoalOption,
         reason_and_expectation: formData.get('reason_and_expectation'),
         group_fit: groupFitOption === 'Diğer' ? otherGroupFitText : groupFitOption,
-        motivation_score: formData.get('motivation_score'),
+        motivation_score,
         financial_status: financialOption === 'Diğer' ? otherFinancialText : financialOption,
         notes: formData.get('notes'),
       }
@@ -99,12 +110,19 @@ export default function BasvuruPage() {
 
     const { error } = await supabase.from('forms').insert([payload])
 
-    setLoading(false)
     if (!error) {
+      // Arka planda diyetisyene bildirim at
+      fetch('/api/notify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fullname, phone, age, motivation_score })
+      }).catch(() => {})
+
       setSubmitted(true)
     } else {
       alert('Form gönderilirken bir hata oluştu: ' + error.message)
     }
+    setLoading(false)
   }
 
   if (submitted) {
@@ -132,7 +150,7 @@ export default function BasvuruPage() {
         <Link href="/" className="inline-flex items-center text-sm font-semibold text-orange-800 hover:text-orange-950 transition-colors">
           <ArrowLeft className="w-4 h-4 mr-1.5" /> Ana Sayfaya Dön
         </Link>
-        <span className="font-extrabold text-orange-700 tracking-tight text-sm">msvebeslenme.com</span>
+        <span className="font-extrabold text-orange-700 tracking-tight text-sm">msvebeslenme</span>
       </div>
 
       <Card className="max-w-3xl w-full border-orange-200/80 shadow-sm bg-white overflow-hidden">
@@ -184,7 +202,6 @@ export default function BasvuruPage() {
               <Input name="job" required placeholder="Mesleğiniz" />
             </div>
 
-            {/* 5. Medeni Durum (Yerel Radio ile Kusursuz Çalışır) */}
             <div className="space-y-2.5">
               <Label className="text-sm font-semibold text-stone-900 block">Medeni durum *</Label>
               <div className="space-y-2">
@@ -204,7 +221,6 @@ export default function BasvuruPage() {
               </div>
             </div>
 
-            {/* 6. Çocuğunuz var mı? */}
             <div className="space-y-2.5">
               <Label className="text-sm font-semibold text-stone-900 block">Çocuğunuz var mı? *</Label>
               <div className="space-y-2">
@@ -231,10 +247,9 @@ export default function BasvuruPage() {
               <Input name="diagnosis_and_type" required placeholder="Örn: 2021 yılında RRMS teşhisi aldım" />
             </div>
 
-            {/* 8. Tanısı konmuş başka hastalık */}
             <div className="space-y-2.5">
               <Label className="text-sm font-semibold text-stone-900 block">
-                Tanısı konmuş başka hastalığınız var mı? <span className="font-normal text-xs text-stone-500">(Var ise "Diğer" seçeneğinde belirtiniz)</span> *
+                Tanısı konmuş başka hastalığınız var mı? *
               </Label>
               <div className="space-y-2">
                 {['Yok', 'Var', 'Diğer'].map((val) => (
@@ -262,7 +277,6 @@ export default function BasvuruPage() {
               )}
             </div>
 
-            {/* 9. Semptomlar (Checkbox) */}
             <div className="space-y-3">
               <Label className="text-sm font-semibold text-stone-900">
                 Günlük hayatınızda sizi en çok zorlayan MS semptomları hangileri? *
@@ -292,7 +306,6 @@ export default function BasvuruPage() {
               </div>
             </div>
 
-            {/* 10. Bağımsız Hareket */}
             <div className="space-y-2.5">
               <Label className="text-sm font-semibold text-stone-900 block">
                 Günlük yaşamda bağımsız hareket edebiliyor musunuz? *
@@ -327,7 +340,6 @@ export default function BasvuruPage() {
               )}
             </div>
 
-            {/* 11. Kilo Hedefi */}
             <div className="space-y-2.5">
               <Label className="text-sm font-semibold text-stone-900 block">
                 Beden görüntünüz ve kilonuzla ilgili bir hedefiniz var mı? Varsa bunun önceliği ne? *
@@ -370,7 +382,6 @@ export default function BasvuruPage() {
               <Textarea name="reason_and_expectation" required rows={3} placeholder="Düşüncelerinizi paylaşın..." />
             </div>
 
-            {/* 13. Grup Uygunluğu */}
             <div className="space-y-3 bg-stone-100/60 p-4 rounded-xl border border-stone-200">
               <Label className="text-xs font-semibold text-stone-900 leading-relaxed block">
                 MS'le Sağlıklı Yaşam; birebir diyet listeleri vermek yerine, haftalık grup toplantıları ve online eğitimlerle ilerleyen bir grup çalışmasıdır. Amacım size katı kurallar koymak değil, eğitimler eşliğinde kalıcı sağlıklı beslenme ve yaşam tarzı alışkanlıkları kazandırmaktır. Programa kaydolduğunuzda bu topluluktan ve eğitimlerden 6 ay boyunca faydalanabiliyorsunuz. Bu işleyiş sizin için uygun mu? *
@@ -412,7 +423,6 @@ export default function BasvuruPage() {
               <Input name="motivation_score" type="number" min={0} max={10} required placeholder="Örn: 9" />
             </div>
 
-            {/* 15. Bütçe */}
             <div className="space-y-2.5">
               <Label className="text-sm font-semibold text-stone-900 block">
                 MS'le Sağlıklı Yaşam kapsamlı bir danışmanlık programıdır ve ücretlidir. Bu sürece katılım konusunda kendinizi nasıl hissediyorsunuz? *
@@ -448,7 +458,7 @@ export default function BasvuruPage() {
               )}
             </div>
 
-            {/* Onay */}
+            {/* Bilgilendirme Onayı */}
             <div className="p-4 bg-orange-50/70 border border-orange-200/80 rounded-xl space-y-3">
               <p className="text-xs text-stone-800 leading-relaxed font-normal">
                 Formlara yoğunluk durumuna göre 1 hafta içinde sırasıyla WhatsApp üzerinden dönüş yapıyorum. Bu süreyi aşarsa bana Instagram üzerinden ulaşabilirsiniz. (Bazen telefon numaranızı yanlış yazmış oluyorsunuz veya formu göndermemiş oluyorsunuz.) *
@@ -466,6 +476,29 @@ export default function BasvuruPage() {
               </label>
             </div>
 
+            {/* YASAL GÜVENCE: KVKK VE SAĞLIK VERİSİ AYDINLATMA METNİ */}
+            <div className="p-4 bg-stone-100/70 border border-stone-200 rounded-xl space-y-2">
+              <label className="flex items-start space-x-2.5 cursor-pointer select-none">
+                <input
+                  type="checkbox"
+                  checked={kvkkAccepted}
+                  onChange={(e) => setKvkkAccepted(e.target.checked)}
+                  className="w-4 h-4 mt-0.5 rounded border-stone-300 text-orange-600 focus:ring-orange-500 cursor-pointer accent-orange-600 shrink-0"
+                />
+                <span className="text-xs text-stone-700 leading-relaxed">
+                  Paylaştığım sağlık ve kişisel verilerimin beslenme danışmanlığı kapsamında işlenmesine ilişkin{' '}
+                  <button
+                    type="button"
+                    onClick={(e) => { e.preventDefault(); setKvkkModalOpen(true); }}
+                    className="text-orange-700 font-bold underline hover:text-orange-900 inline"
+                  >
+                    KVKK ve Sağlık Verileri Aydınlatma Metni
+                  </button>
+                  'ni okudum, kabul ediyorum. *
+                </span>
+              </label>
+            </div>
+
             <div className="space-y-2">
               <Label className="text-sm font-semibold text-stone-900">
                 Eklemek istediğiniz bir şey varsa yazabilirsiniz
@@ -479,6 +512,42 @@ export default function BasvuruPage() {
           </form>
         </CardContent>
       </Card>
+
+      {/* KVKK AYDINLATMA METNİ MODAL */}
+      {kvkkModalOpen && (
+        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
+          <Card className="w-full max-w-xl bg-white shadow-2xl border-stone-200 max-h-[85vh] flex flex-col">
+            <div className="p-5 border-b border-stone-100 flex justify-between items-center">
+              <div className="flex items-center gap-2">
+                <Shield className="w-5 h-5 text-orange-600" />
+                <h3 className="font-bold text-base text-stone-900">KVKK ve Sağlık Verileri Aydınlatma Metni</h3>
+              </div>
+              <Button size="icon" variant="ghost" onClick={() => setKvkkModalOpen(false)}>
+                <X className="w-4 h-4 text-stone-500" />
+              </Button>
+            </div>
+            <div className="p-6 text-xs text-stone-700 space-y-4 overflow-y-auto leading-relaxed">
+              <p>
+                <strong>1. Veri Sorumlusu:</strong> Bu form aracılığıyla toplanan kişisel ve özel nitelikli sağlık verileriniz, Diyetisyen Sümeyye Can (msvebeslenme) tarafından 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) uyarınca korunmaktadır.
+              </p>
+              <p>
+                <strong>2. İşleme Amacı:</strong> Formda paylaştığınız ad, telefon, yaş, MS teşhis yılı, semptomlar ve beslenme öyküsü gibi veriler; yalnızca size özel bireysel beslenme protokolü hazırlamak, ön görüşme sağlamak ve danışmanlık sürecini yürütmek amacıyla işlenir.
+              </p>
+              <p>
+                <strong>3. Gizlilik ve Üçüncü Taraflar:</strong> Sağlık verileriniz kesinlikle reklam, pazarlama veya ticari amaçlarla üçüncü şahıs veya kurumlarla paylaşılmaz.
+              </p>
+              <p>
+                <strong>4. Haklarınız:</strong> KVKK'nın 11. maddesi kapsamında dilediğiniz zaman verilerinizin silinmesini, güncellenmesini veya işlenme amacını talep etme hakkına sahipsiniz.
+              </p>
+            </div>
+            <div className="p-4 border-t border-stone-100 flex justify-end">
+              <Button onClick={() => { setKvkkAccepted(true); setKvkkModalOpen(false); }} className="bg-orange-600 hover:bg-orange-700 text-white font-semibold">
+                Okudum, Onaylıyorum
+              </Button>
+            </div>
+          </Card>
+        </div>
+      )}
     </div>
   )
 }

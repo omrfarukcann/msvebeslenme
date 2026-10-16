@@ -6,7 +6,7 @@ import { createClient } from '@/lib/supabase/client'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-import { MailCheck, ArrowLeft } from 'lucide-react'
+import { MailCheck, ArrowLeft, Lock, ArrowRight } from 'lucide-react'
 
 export default function RegisterPage() {
   const supabase = createClient()
@@ -51,10 +51,10 @@ export default function RegisterPage() {
             </p>
             <div className="space-y-2">
               <Link href="/login">
-                <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white">Giriş Ekranına Git</Button>
+                <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white cursor-pointer">Giriş Ekranına Git</Button>
               </Link>
               <Link href="/">
-                <Button variant="ghost" className="w-full text-orange-800">Ana Sayfaya Dön</Button>
+                <Button variant="ghost" className="w-full text-orange-800 cursor-pointer">Ana Sayfaya Dön</Button>
               </Link>
             </div>
           </CardContent>
@@ -73,11 +73,36 @@ export default function RegisterPage() {
       </div>
 
       <Card className="w-full max-w-md shadow-sm border-orange-100 bg-white">
-        <CardHeader className="text-center">
+        <CardHeader className="text-center pb-4">
           <CardTitle className="text-2xl font-bold text-orange-950">Danışan Kaydı</CardTitle>
-          <CardDescription>Eğitim video arşivine erişmek için hesap oluşturun</CardDescription>
+          <CardDescription>Eğitim portalı ve video arşivine erişim için hesap oluşturun</CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent className="space-y-5">
+          {/* Özel Danışan Alanı Bilgilendirme Kutusu */}
+          <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-950 text-xs leading-relaxed space-y-2">
+            <div className="flex items-center gap-2 font-bold text-amber-900 text-sm">
+              <Lock className="w-4 h-4 text-orange-600 shrink-0" />
+              <span>Bu Alan Yalnızca Aktif Danışanlarımıza Özeldir</span>
+            </div>
+            <p className="text-stone-600">
+              Eğitim videoları, modüller ve canlı toplantılar <strong>MS'le Sağlıklı Yaşam</strong> programına dahil olan danışanlarımız içindir.
+            </p>
+            <p className="text-stone-600">
+              Daha önce tanışmadıysak veya programa kabul edilmediyseniz, lütfen öncelikle başvuru formunu doldurunuz:
+            </p>
+            <div className="pt-1">
+              <Link href="/basvuru" className="block">
+                <Button 
+                  size="sm" 
+                  variant="outline" 
+                  className="w-full bg-white border-amber-300 text-amber-900 hover:bg-amber-100/70 font-semibold text-xs cursor-pointer flex items-center justify-center gap-1.5"
+                >
+                  Önce Başvuru Formunu Doldur <ArrowRight className="w-3.5 h-3.5" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+
           <form onSubmit={handleRegister} className="space-y-4">
             {errorMsg && (
               <div className="p-3 text-sm text-red-700 bg-red-50 border border-red-200 rounded-lg">
@@ -92,7 +117,7 @@ export default function RegisterPage() {
               <label className="text-sm font-medium text-orange-950 block mb-1">Şifre</label>
               <Input name="password" type="password" required minLength={6} placeholder="En az 6 karakter" className="focus-visible:ring-orange-500" />
             </div>
-            <Button type="submit" disabled={loading} className="w-full bg-orange-600 hover:bg-orange-700 text-white font-medium py-2.5">
+            <Button type="submit" disabled={loading} className="w-full bg-orange-600 hover:bg-orange-700 text-white font-medium py-2.5 cursor-pointer">
               {loading ? 'Kayıt Yapılıyor...' : 'Hesap Oluştur'}
             </Button>
             <p className="text-center text-sm text-muted-foreground mt-4">

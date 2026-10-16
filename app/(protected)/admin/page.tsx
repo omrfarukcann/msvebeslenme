@@ -39,7 +39,6 @@ import {
   Wallet,
   TrendingUp,
   TrendingDown,
-  DollarSign,
   Filter
 } from 'lucide-react'
 
@@ -60,7 +59,7 @@ export default function AdminDashboard() {
   const [editingPost, setEditingPost] = useState<any | null>(null)
   const [editingVideo, setEditingVideo] = useState<any | null>(null)
 
-  // Video Formu Controlled State'leri
+  // Video Form State'leri
   const [videoTitle, setVideoTitle] = useState('')
   const [videoSection, setVideoSection] = useState('1. Hafta (Part 1)')
   const [videoUrl, setVideoUrl] = useState('')
@@ -120,6 +119,7 @@ export default function AdminDashboard() {
     if (txData) setTransactions(txData)
   }
 
+  // Şu an sistemde gerçekten videosu olan aktif benzersiz part adları
   const allAvailableSections = Array.from(
     new Set(videos.map(v => (v.section || 'Genel Eğitimler').trim()))
   )
@@ -143,7 +143,9 @@ export default function AdminDashboard() {
   // PART İZİNLERİ
   function openPermsModal(user: any) {
     setSelectedUserForPerms(user)
-    setUserPerms(user.allowed_sections || [])
+    // Sadece gerçekten sistemde var olan partları filtrele
+    const validSections = (user.allowed_sections || []).filter((sec: string) => allAvailableSections.includes(sec))
+    setUserPerms(validSections)
   }
 
   function toggleSectionPerm(sectionName: string) {
@@ -175,7 +177,7 @@ export default function AdminDashboard() {
     window.location.href = '/'
   }
 
-  // FİNANS: YENİ GELİR / GİDER EKLEME
+  // FİNANS İŞLEMLERİ
   async function handleAddTransaction(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setTxLoading(true)
@@ -219,13 +221,11 @@ export default function AdminDashboard() {
     fetchData()
   }
 
-  // FİNANS FİLTRELEME & TOPLAMLAR HESAPLAMA (useMemo)
   const filteredTransactions = useMemo(() => {
     return transactions.filter(t => {
       const txDate = new Date(t.transaction_date)
       const now = new Date()
 
-      // Tarih Filtresi
       if (dateFilter === 'this_month') {
         const isThisMonth = txDate.getMonth() === now.getMonth() && txDate.getFullYear() === now.getFullYear()
         if (!isThisMonth) return false
@@ -234,10 +234,7 @@ export default function AdminDashboard() {
         if (!isThisYear) return false
       }
 
-      // Tür Filtresi
       if (typeFilter !== 'all' && t.type !== typeFilter) return false
-
-      // Ödeme Yöntemi Filtresi
       if (methodFilter !== 'all' && t.payment_method !== methodFilter) return false
 
       return true
@@ -367,6 +364,29 @@ export default function AdminDashboard() {
     fetchData()
   }
 
+  // YENİ ÖZELLİK: BÖLÜMÜ / PART'I VE İZİNLERİNİ TAMAMEN SİLME
+  async function handleDeleteEntireSection(sectionName: string) {
+    const confirmDelete = confirm(`"${sectionName}" bölümünü tamamen silmek istediğinize emin misiniz?\n\nBu işlem:\n1. Bu bölüme ait tüm videoları silecek.\n2. Danışanların izin listesinden bu partı tamamen temizleyecektir.`)
+    if (!confirmDelete) return
+
+    // 1. O bölümdeki videoları sil
+    await supabase.from('videos').delete().eq('section', sectionName)
+
+    // 2. Danışanların allowed_sections listesinden bu partı temizle
+    for (const u of users) {
+      const allowed: string[] = u.allowed_sections || []
+      if (allowed.includes(sectionName)) {
+        const updatedSections = allowed.filter(s => s !== sectionName)
+        await supabase
+          .from('users')
+          .update({ allowed_sections: updatedSections })
+          .eq('id', u.id)
+      }
+    }
+
+    fetchData()
+  }
+
   async function moveVideoOrder(video: any, direction: 'up' | 'down') {
     const currentSec = (video.section || 'Genel Eğitimler').trim()
     const sectionVideos = videos
@@ -389,10 +409,24 @@ export default function AdminDashboard() {
     fetchData()
   }
 
-  async function deleteVideo(id: string) {
+  // TEK TEK VİDEO SİLME VE ARTIK KALAN BOŞ PARTLARI KULLANICIDAN TEMİZLEME
+  async function deleteVideo(id: string, sectionName: string) {
     if (!confirm('Videoyu silmek istediğinize emin misiniz?')) return
     await supabase.from('videos').delete().eq('id', id)
     if (editingVideo?.id === id) cancelEditVideo()
+
+    // Eğer bu bölümde başka video kalmadıysa danışanlardan da temizle
+    const remainingInSec = videos.filter(v => v.section === sectionName && v.id !== id)
+    if (remainingInSec.length === 0) {
+      for (const u of users) {
+        const allowed: string[] = u.allowed_sections || []
+        if (allowed.includes(sectionName)) {
+          const updated = allowed.filter(s => s !== sectionName)
+          await supabase.from('users').update({ allowed_sections: updated }).eq('id', u.id)
+        }
+      }
+    }
+
     fetchData()
   }
 
@@ -585,7 +619,6 @@ export default function AdminDashboard() {
               </Badge>
             </button>
 
-            {/* YENİ: FİNANS VE GELİR GİDER MENÜSÜ */}
             <button
               onClick={() => { setActiveMenu('finance'); setSelectedForm(null); }}
               className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-colors cursor-pointer ${
@@ -619,7 +652,7 @@ export default function AdminDashboard() {
               }`}
             >
               <div className="flex items-center gap-3">
-                <History className="w-4 h-4" /> Toplantı Kayıtları
+                <History className="w-4 h-4 text-orange-600" /> Toplantı Kayıtları
               </div>
               <Badge variant="secondary" className="bg-orange-100 text-orange-800 text-[11px] px-1.5">
                 {meetingRecords.length}
@@ -633,7 +666,7 @@ export default function AdminDashboard() {
               }`}
             >
               <div className="flex items-center gap-3">
-                <MessageSquareHeart className="w-4 h-4" /> Danışan Yorumları
+                <MessageSquareHeart className="w-4 h-4 text-orange-600" /> Danışan Yorumları
               </div>
               <Badge variant="secondary" className="bg-orange-100 text-orange-800 text-[11px] px-1.5">
                 {reviews.filter(r => !r.is_approved).length > 0 ? `${reviews.filter(r => !r.is_approved).length} Yeni` : reviews.length}
@@ -789,13 +822,13 @@ export default function AdminDashboard() {
           </div>
         )}
 
-        {/* SEKME 2: DANIŞAN YÖNETİMİ */}
+        {/* SEKME 2: DANIŞAN YÖNETİMİ (AKTİF VE TEMİZLENMİŞ PARTLAR LİSTESİ) */}
         {activeMenu === 'users' && (
           <div className="space-y-6">
             <div>
               <h2 className="text-2xl font-bold text-stone-900">Kayıtlı Danışanlar & Yetkilendirme</h2>
               <p className="text-xs text-muted-foreground mt-0.5">
-                Genel Danışan Onayı kapalı olan kullanıcılar sisteme giremez.
+                Genel Danışan Onayı kapalı olan kullanıcılar sisteme giremez. Sadece gerçekten videosu olan partlar listelenir.
               </p>
             </div>
 
@@ -813,7 +846,8 @@ export default function AdminDashboard() {
                   </TableHeader>
                   <TableBody>
                     {users.map((u) => {
-                      const perms: string[] = u.allowed_sections || []
+                      // Silinmiş partları filtrele (Sadece allAvailableSections içinde olanlar gösterilsin)
+                      const perms: string[] = (u.allowed_sections || []).filter((sec: string) => allAvailableSections.includes(sec))
                       const isAuth = u.is_authorized === true
 
                       return (
@@ -924,7 +958,7 @@ export default function AdminDashboard() {
                           </label>
                         ))
                       ) : (
-                        <p className="text-xs text-stone-400 italic">Henüz sisteme eklenmiş bir video ve bölüm bulunmuyor.</p>
+                        <p className="text-xs text-stone-400 italic">Sistemde henüz aktif bir video partı bulunmuyor.</p>
                       )}
                     </div>
 
@@ -948,7 +982,7 @@ export default function AdminDashboard() {
           </div>
         )}
 
-        {/* SEKME 3: FİNANS, GELİR & GİDER TAKİBİ (YENİ) */}
+        {/* SEKME 3: FİNANS & GELİR TAKİBİ */}
         {activeMenu === 'finance' && (
           <div className="space-y-8">
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
@@ -960,7 +994,7 @@ export default function AdminDashboard() {
               </div>
             </div>
 
-            {/* 1. Özet İstatistik Kartları */}
+            {/* İstatistik Kartları */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               <Card className="border-emerald-200 bg-emerald-50/50 shadow-xs">
                 <CardContent className="p-5 flex items-center justify-between">
@@ -999,7 +1033,7 @@ export default function AdminDashboard() {
               </Card>
             </div>
 
-            {/* 2. Yeni Gelir / Gider Ekleme Formu */}
+            {/* Yeni İşlem Formu */}
             <Card className="border-stone-200/80 shadow-xs bg-white">
               <CardHeader className="pb-3 border-b border-stone-100">
                 <CardTitle className="text-base font-bold text-stone-900 flex items-center gap-2">
@@ -1008,7 +1042,6 @@ export default function AdminDashboard() {
               </CardHeader>
               <CardContent className="pt-4">
                 <form onSubmit={handleAddTransaction} className="space-y-4">
-                  {/* Gelir mi Gider mi Butonları */}
                   <div className="flex gap-2">
                     <button
                       type="button"
@@ -1128,7 +1161,7 @@ export default function AdminDashboard() {
               </CardContent>
             </Card>
 
-            {/* 3. Filtreleme Çubuğu ve Tablo */}
+            {/* Filtreleme ve Tablo */}
             <div className="space-y-4">
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-3 bg-white p-3.5 rounded-xl border border-stone-200">
                 <div className="flex items-center gap-2 text-xs font-bold text-stone-700">
@@ -1136,7 +1169,6 @@ export default function AdminDashboard() {
                 </div>
 
                 <div className="flex flex-wrap gap-2 w-full md:w-auto">
-                  {/* Tarih Filtresi */}
                   <select 
                     value={dateFilter} 
                     onChange={(e: any) => setDateFilter(e.target.value)}
@@ -1147,7 +1179,6 @@ export default function AdminDashboard() {
                     <option value="all">Tüm Zamanlar</option>
                   </select>
 
-                  {/* Tür Filtresi */}
                   <select 
                     value={typeFilter} 
                     onChange={(e: any) => setTypeFilter(e.target.value)}
@@ -1158,7 +1189,6 @@ export default function AdminDashboard() {
                     <option value="expense">Sadece Giderler</option>
                   </select>
 
-                  {/* Yöntem Filtresi */}
                   <select 
                     value={methodFilter} 
                     onChange={(e) => setMethodFilter(e.target.value)}
@@ -1172,7 +1202,6 @@ export default function AdminDashboard() {
                 </div>
               </div>
 
-              {/* Finans Tablosu */}
               <Card className="border-stone-200/80 shadow-xs bg-white">
                 <CardContent className="p-0">
                   <Table>
@@ -1437,13 +1466,13 @@ export default function AdminDashboard() {
           </div>
         )}
 
-        {/* SEKME 7: VİDEO YÖNETİMİ */}
+        {/* SEKME 7: VİDEO YÖNETİMİ & BÖLÜMÜ TAMAMEN SİLME ÖZELLİĞİ */}
         {activeMenu === 'videos' && (
           <div className="space-y-8">
             <div className="flex justify-between items-center">
               <div>
                 <h2 className="text-2xl font-bold text-stone-900">Eğitim Videoları Yönetimi</h2>
-                <p className="text-xs text-muted-foreground mt-0.5">Videoları ve bölümleri tek tıkla organize edin</p>
+                <p className="text-xs text-muted-foreground mt-0.5">Videoları ve bölümleri tek tıkla organize edin, yeniden adlandırın veya silin</p>
               </div>
               {editingVideo && (
                 <Button variant="outline" size="sm" onClick={cancelEditVideo} className="cursor-pointer">
@@ -1452,6 +1481,7 @@ export default function AdminDashboard() {
               )}
             </div>
 
+            {/* Video Formu */}
             <Card className={`border shadow-xs bg-white ${editingVideo ? 'border-orange-500 ring-2 ring-orange-500/20' : 'border-stone-200/80'}`}>
               <CardHeader>
                 <CardTitle className="text-base font-bold text-stone-900 flex items-center gap-2">
@@ -1459,7 +1489,7 @@ export default function AdminDashboard() {
                   {editingVideo ? `Videoyu Düzenle: "${editingVideo.title}"` : 'Yeni Video Ekle'}
                 </CardTitle>
                 <CardDescription className="text-xs">
-                  Bölüm adını serbestçe yazabilir veya hazır butonlara tıklayarak seçebilirsiniz.
+                  Bölüm adını serbestçe yazabilir veya hazır butonlara basarak seçebilirsiniz.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -1533,24 +1563,40 @@ export default function AdminDashboard() {
               </CardContent>
             </Card>
 
+            {/* BÖLÜM BÖLÜM LİSTELEME & BÖLÜMÜ TAMAMEN SİL BUTONU */}
             <div className="space-y-6">
-              <h3 className="text-lg font-bold text-stone-900">Mevcut Videolar</h3>
+              <h3 className="text-lg font-bold text-stone-900">Mevcut Videolar (Bölümlere Göre Gruplanmış)</h3>
+
               {Object.keys(groupedVideosForAdmin).length > 0 ? (
                 Object.keys(groupedVideosForAdmin).map((sectionName) => (
                   <Card key={sectionName} className="border-stone-200/80 shadow-xs bg-white overflow-hidden">
                     <div className="bg-orange-50/70 border-b border-orange-100 p-3.5 flex justify-between items-center">
-                      <div className="flex items-center gap-2.5">
+                      <div className="flex items-center gap-2">
                         <Layers className="w-4 h-4 text-orange-600" />
                         <h4 className="font-bold text-sm text-stone-900">{sectionName}</h4>
+                        
                         <Button 
                           size="sm" 
                           variant="ghost" 
                           onClick={() => openRenameSectionModal(sectionName)}
                           className="h-7 px-2 text-[11px] text-orange-800 hover:bg-orange-100/70 cursor-pointer font-medium"
+                          title="Bölümün adını değiştir"
                         >
-                          <Edit2 className="w-3 h-3 mr-1 text-orange-600" /> Bölüm Adını Değiştir
+                          <Edit2 className="w-3 h-3 mr-1 text-orange-600" /> Adı Değiştir
+                        </Button>
+
+                        {/* YENİ: BÖLÜMÜ VE DANIŞAN İZİNLERİNİ TAMAMEN SİL BUTONU */}
+                        <Button 
+                          size="sm" 
+                          variant="ghost" 
+                          onClick={() => handleDeleteEntireSection(sectionName)}
+                          className="h-7 px-2 text-[11px] text-red-600 hover:bg-red-50 hover:text-red-700 cursor-pointer font-medium"
+                          title="Bölümü ve izinleri tamamen temizle"
+                        >
+                          <Trash2 className="w-3 h-3 mr-1 text-red-500" /> Bölümü Sil
                         </Button>
                       </div>
+                      
                       <Badge variant="secondary" className="bg-white border-orange-200 text-orange-900 text-xs">
                         {groupedVideosForAdmin[sectionName].length} Video
                       </Badge>
@@ -1606,7 +1652,7 @@ export default function AdminDashboard() {
                                   <Button variant="ghost" size="sm" onClick={() => startEditVideo(v)} className="text-stone-600 hover:text-orange-600 h-8 px-2 text-xs cursor-pointer">
                                     <Edit2 className="w-3.5 h-3.5 mr-1" /> Düzenle
                                   </Button>
-                                  <Button variant="ghost" size="icon" onClick={() => deleteVideo(v.id)} className="text-stone-400 hover:text-red-600 h-8 w-8 cursor-pointer">
+                                  <Button variant="ghost" size="icon" onClick={() => deleteVideo(v.id, sectionName)} className="text-stone-400 hover:text-red-600 h-8 w-8 cursor-pointer">
                                     <Trash2 className="w-4 h-4" />
                                   </Button>
                                 </TableCell>

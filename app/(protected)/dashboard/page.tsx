@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import { SignOutButton } from '@/components/SignOutButton'
 import { ProtectedVideoPlayer } from '@/components/ProtectedVideoPlayer'
 import { DashboardReviewForm } from '@/components/DashboardReviewForm'
+import { FloatingWhatsApp } from '@/components/FloatingWhatsApp'
 import { 
   Clock, 
   PlayCircle, 
@@ -81,7 +82,7 @@ export default async function DashboardPage() {
   )
 
   return (
-    <div className="min-h-screen bg-stone-50/70 pb-20">
+    <div className="min-h-screen bg-stone-50/70 pb-20 relative">
       <header className="bg-white border-b border-orange-100 py-6 px-6 md:px-12 mb-8 shadow-xs">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
@@ -223,9 +224,12 @@ export default async function DashboardPage() {
         </section>
 
         <section className="pt-6 border-t border-stone-200 max-w-2xl mx-auto">
-          <DashboardReviewForm userId={user.id} />
+          {user && <DashboardReviewForm userId={user.id} />}
         </section>
       </main>
+
+      {/* SAĞ ALTA SABİTLENMİŞ CANLI WHATSAPP BUTONU (Numaranızı 905XXXXXXXXX şeklinde güncelleyin) */}
+      <FloatingWhatsApp phoneNumber="905000000000" />
     </div>
   )
 }

@@ -62,7 +62,7 @@ export default function LoginPage() {
       <Card className="w-full max-w-md shadow-sm border-orange-100 bg-white">
         <CardHeader className="text-center">
           <CardTitle className="text-2xl font-bold text-orange-950">Giriş Yap</CardTitle>
-          <CardDescription>Danışan veya Yönetici hesabınıza erişin</CardDescription>
+          <CardDescription>Hesabınıza Giriş Yapın</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleLogin} className="space-y-4">
@@ -78,6 +78,12 @@ export default function LoginPage() {
             <div>
               <label className="text-sm font-medium text-orange-950 block mb-1">Şifre</label>
               <Input name="password" type="password" required placeholder="••••••••" className="focus-visible:ring-orange-500" />
+            </div>
+            <div className="flex justify-between items-center mb-1">
+              <label className="text-sm font-medium text-orange-950 block">Şifre</label>
+              <Link href="/forgot-password" className="text-xs text-orange-700 hover:underline">
+                Şifremi Unuttum
+              </Link>
             </div>
             <Button type="submit" disabled={loading} className="w-full bg-orange-600 hover:bg-orange-700 text-white shadow-sm font-medium py-2.5">
               {loading ? 'Giriş Yapılıyor...' : 'Giriş Yap'}
